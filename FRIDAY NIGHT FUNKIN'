@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRIDAY NIGHT FUNKIN - 韵律对决音乐游戏 | GamerBlitz</title>
+    <meta name="description" content="在GamerBlitz免费在线玩FRIDAY NIGHT FUNKIN，一款极具人气的节奏音乐对决游戏。跟随节拍，击败对手，解锁所有关卡！">
+    <meta name="keywords" content="FRIDAY NIGHT FUNKIN, 音乐游戏, 节奏游戏, 在线游戏, 免费游戏, GamerBlitz">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/friday-night-funkin">
+    <meta property="og:title" content="FRIDAY NIGHT FUNKIN - 韵律对决音乐游戏">
+    <meta property="og:description" content="免费在线体验节奏对决游戏FRIDAY NIGHT FUNKIN，展示你的音乐才华！">
+    <meta property="og:url" content="https://gamerblitz.online/friday-night-funkin">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GamerBlitz">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- 导航栏 -->
+    <nav class="bg-indigo-900 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+                GamerBlitz<span class="text-yellow-400">.online</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="/" class="hover:text-yellow-300 transition duration-300">首页</a>
+                <a href="/games" class="hover:text-yellow-300 transition duration-300">游戏库</a>
+                <a href="/categories" class="hover:text-yellow-300 transition duration-300">游戏分类</a>
+                <a href="/about" class="hover:text-yellow-300 transition duration-300">关于我们</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 游戏标题区 -->
+    <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                FRIDAY NIGHT FUNKIN
+            </h1>
+            <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
+                用你的音乐节奏感征服对手，在这款引人入胜的节奏对决游戏中成为音乐之王！
+            </p>
+        </div>
+    </header>
+
+    <!-- 游戏区域 -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- 游戏框架 -->
+        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden mb-8">
+            <div class="relative pb-[56.25%] h-0"> <!-- 16:9宽高比 -->
+                <iframe 
+                    src="https://html-classic.itch.zone/html/2876389-1104083/index.html" 
+                    class="absolute top-0 left-0 w-full h-full border-0"
+                    allowfullscreen
+                    allow="fullscreen; autoplay; encrypted-media"
+                    title="FRIDAY NIGHT FUNKIN在线游戏"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- 游戏信息 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- 游戏描述 -->
+            <div class="md:col-span-2 bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-400">游戏介绍</h2>
+                <div class="space-y-4 text-gray-200">
+                    <p>《FRIDAY NIGHT FUNKIN》是一款充满挑战性的节奏音乐游戏，玩家将扮演一位名为Boyfriend的蓝发少年，他必须通过音乐对决赢得女友父母的认可。</p>
+                    
+                    <p>游戏玩法简单而上瘾：跟随屏幕上出现的箭头提示，按下正确的按键，与对手进行音乐对决。每个关卡都有独特的角色和原创音乐，随着游戏的进行，难度会逐渐提升，挑战你的反应能力和节奏感。</p>
+                    
+                    <p>《FRIDAY NIGHT FUNKIN》以其独特的视觉风格、朗朗上口的配乐和具有挑战性的游戏玩法而在独立游戏社区中大受欢迎。无论你是节奏游戏的新手还是老手，这款游戏都能带给你无尽的乐趣！</p>
+                    
+                    <h3 class="text-xl font-bold mt-6 mb-2 text-indigo-300">游戏特色：</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>简单直观的游戏操作 - 使用方向键或WASD进行游戏</li>
+                        <li>丰富多样的角色和原创音乐</li>
+                        <li>独特的卡通艺术风格和引人入胜的故事情节</li>
+                        <li>从简单到困难的多种难度级别</li>
+                        <li>充满挑战性的节奏游戏体验</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 侧边栏 -->
+            <div class="space-y-6">
+                <!-- 游戏控制 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">游戏控制</h3>
+                    <div class="grid grid-cols-2 gap-2 text-gray-200">
+                        <div class="font-semibold">方向键:</div>
+                        <div>跟随节奏按键</div>
+                        <div class="font-semibold">WASD:</div>
+                        <div>替代控制方式</div>
+                        <div class="font-semibold">空格键:</div>
+                        <div>菜单确认/暂停</div>
+                        <div class="font-semibold">ESC:</div>
+                        <div>返回/退出</div>
+                    </div>
+                </div>
+                
+                <!-- 游戏信息卡 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">游戏详情</h3>
+                    <div class="grid grid-cols-2 gap-2 text-gray-200">
+                        <div class="font-semibold">类型:</div>
+                        <div>节奏音乐游戏</div>
+                        <div class="font-semibold">开发者:</div>
+                        <div>ninjamuffin99团队</div>
+                        <div class="font-semibold">平台:</div>
+                        <div>浏览器</div>
+                        <div class="font-semibold">难度:</div>
+                        <div>中等至困难</div>
+                        <div class="font-semibold">适合年龄:</div>
+                        <div>13+</div>
+                    </div>
+                </div>
+                
+                <!-- 相关游戏 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">相关游戏</h3>
+                    <div class="space-y-3">
+                        <a href="#" class="block p-2 hover:bg-gray-700 rounded transition duration-300">
+                            <div class="text-indigo-300 font-medium">Just Dance Online</div>
+                        </a>
+                        <a href="#" class="block p-2 hover:bg-gray-700 rounded transition duration-300">
+                            <div class="text-indigo-300 font-medium">Beat Master</div>
+                        </a>
+                        <a href="#" class="block p-2 hover:bg-gray-700 rounded transition duration-300">
+                            <div class="text-indigo-300 font-medium">Guitar Hero Flash</div>
+                        </a>
+                        <a href="#" class="block p-2 hover:bg-gray-700 rounded transition duration-300">
+                            <div class="text-indigo-300 font-medium">Rhythm Paradise</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 用户评论区 -->
+    <section class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-6 text-center text-yellow-400">玩家评论</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 评论1 -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">L</div>
+                    <div class="ml-3">
+                        <div class="font-semibold">李小明</div>
+                        <div class="text-yellow-400 text-sm">★★★★★</div>
+                    </div>
+                </div>
+                <p class="text-gray-300">这游戏实在太上瘾了！音乐超级棒，而且操作简单容易上手。已经玩了好几个小时都停不下来！</p>
+            </div>
+            
+            <!-- 评论2 -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold">W</div>
+                    <div class="ml-3">
+                        <div class="font-semibold">王大力</div>
+                        <div class="text-yellow-400 text-sm">★★★★☆</div>
+                    </div>
+                </div>
+                <p class="text-gray-300">作为节奏游戏爱好者，我非常喜欢这款游戏的创意和关卡设计。唯一的问题是高难度关卡真的很有挑战性！</p>
+            </div>
+            
+            <!-- 评论3 -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">Z</div>
+                    <div class="ml-3">
+                        <div class="font-semibold">张小乐</div>
+                        <div class="text-yellow-400 text-sm">★★★★★</div>
+                    </div>
+                </div>
+                <p class="text-gray-300">角色设计太可爱了，音乐节奏感超强！最喜欢Week 4的歌曲，玩起来真的很过瘾，推荐给所有音游爱好者！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">GamerBlitz</h3>
+                    <p class="mb-4">您的在线游戏目的地，提供最好玩的免费网页游戏！</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="hover:text-white transition duration-300">首页</a></li>
+                        <li><a href="/top-games" class="hover:text-white transition duration-300">热门游戏</a></li>
+                        <li><a href="/new-games" class="hover:text-white transition duration-300">最新游戏</a></li>
+                        <li><a href="/categories" class="hover:text-white transition duration-300">游戏分类</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">游戏分类</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/categories/action" class="hover:text-white transition duration-300">动作游戏</a></li>
+                        <li><a href="/categories/adventure" class="hover:text-white transition duration-300">冒险游戏</a></li>
+                        <li><a href="/categories/puzzle" class="hover:text-white transition duration-300">益智游戏</a></li>
+                        <li><a href="/categories/rhythm" class="hover:text-white transition duration-300">音乐节奏</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">关于我们</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="hover:text-white transition duration-300">关于GamerBlitz</a></li>
+                        <li><a href="/privacy" class="hover:text-white transition duration-300">隐私政策</a></li>
+                        <li><a href="/terms" class="hover:text-white transition duration-300">使用条款</a></li>
+                        <li><a href="/contact" class="hover:text-white transition duration-300">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2023 GamerBlitz.online - 版权所有。所有游戏的商标和版权属于其各自所有者。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-5 right-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 shadow-lg transition duration-300 opacity-0 invisible">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- 简单的JavaScript -->
+    <script>
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) { // 当滚动超过300px时显示按钮
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 
