@@ -75,10 +75,30 @@
         </div>
 
         <!-- 添加备用链接 -->
-        <div class="text-center mt-4 mb-8">
-            <a href="https://www.newgrounds.com/portal/view/770371" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
-                游戏加载失败？点击这里直接玩
-            </a>
+        <div class="bg-gradient-to-r from-purple-900 to-indigo-900 rounded-lg shadow-xl p-6 mb-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold text-yellow-400 mb-2">无法正常游戏？</h3>
+                    <p class="text-indigo-200">我们提供多个游戏源供您选择，确保最佳游戏体验</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://www.newgrounds.com/portal/view/770371" target="_blank" 
+                       class="flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition duration-300 shadow-lg hover:shadow-xl">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
+                            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
+                        </svg>
+                        在Newgrounds上玩
+                    </a>
+                    <button onclick="location.reload()" 
+                            class="flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition duration-300 shadow-lg hover:shadow-xl">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        刷新游戏
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- 游戏信息 -->
