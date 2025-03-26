@@ -1,4 +1,4 @@
- /*
+/*
   X-Frame-Options: ALLOWALL
   Content-Security-Policy: frame-ancestors 'self' * https://*.newgrounds.com https://*.github.io https://*.slope-game.io https://*.slope-game.com https://*.crazygames.com https://*.y8.com https://*.coolmathgames.com https://*.poki.com https://*.kizi.com;
   Access-Control-Allow-Origin: *
