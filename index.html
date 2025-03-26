@@ -1,261 +1,243 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRIDAY NIGHT FUNKIN - 韵律对决音乐游戏 | GamerBlitz</title>
-    <meta name="description" content="在GamerBlitz免费在线玩FRIDAY NIGHT FUNKIN，一款极具人气的节奏音乐对决游戏。跟随节拍，击败对手，解锁所有关卡！">
-    <meta name="keywords" content="FRIDAY NIGHT FUNKIN, 音乐游戏, 节奏游戏, 在线游戏, 免费游戏, GamerBlitz">
+    <title>GamerBlitz - Your Ultimate Online Gaming Destination | Free Browser Games</title>
+    <meta name="description" content="Play the best free online games at GamerBlitz. Experience thrilling browser games including Slope, 2048, Retro Bowl, and more. No downloads required!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="canonical" href="https://gamerblitz.online/friday-night-funkin">
-    <meta property="og:title" content="FRIDAY NIGHT FUNKIN - 韵律对决音乐游戏">
-    <meta property="og:description" content="免费在线体验节奏对决游戏FRIDAY NIGHT FUNKIN，展示你的音乐才华！">
-    <meta property="og:url" content="https://gamerblitz.online/friday-night-funkin">
+    <link rel="canonical" href="https://gamerblitz.online">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="GamerBlitz - Play Free Online Games">
+    <meta property="og:description" content="Instant access to the best free browser games. No downloads needed.">
+    <meta property="og:url" content="https://gamerblitz.online">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GamerBlitz">
 </head>
 <body class="bg-gray-900 text-white">
-    <!-- 导航栏 -->
-    <nav class="bg-indigo-900 p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
+    <!-- Navigation -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
             <a href="/" class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
                 GamerBlitz<span class="text-yellow-400">.online</span>
             </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="/" class="hover:text-yellow-300 transition duration-300">首页</a>
-                <a href="/games" class="hover:text-yellow-300 transition duration-300">游戏库</a>
-                <a href="/categories" class="hover:text-yellow-300 transition duration-300">游戏分类</a>
-                <a href="/about" class="hover:text-yellow-300 transition duration-300">关于我们</a>
+            
+            <!-- Search Bar -->
+            <div class="order-3 mt-4 w-full md:w-auto md:order-2 md:mt-0">
+                <div class="relative">
+                    <input type="search" 
+                           placeholder="Search games..." 
+                           class="w-full md:w-64 px-4 py-2 bg-gray-800 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <button class="absolute right-3 top-2">
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <button class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6 order-2 md:order-3">
+                <a href="/" class="hover:text-yellow-300 transition duration-300">Home</a>
+                <a href="/categories" class="hover:text-yellow-300 transition duration-300">Categories</a>
+                <a href="/top-games" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+                <a href="/new-games" class="hover:text-yellow-300 transition duration-300">New Games</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none order-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
         </div>
     </nav>
 
-    <!-- 游戏标题区 -->
-    <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+    <!-- Hero Section -->
+    <header class="py-12 bg-gradient-to-r from-purple-800 to-indigo-800">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
-                FRIDAY NIGHT FUNKIN
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                GamerBlitz: Dive into the latest and most thrilling games for a fast-paced, competitive edge!
             </h1>
             <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
-                用你的音乐节奏感征服对手，在这款引人入胜的节奏对决游戏中成为音乐之王！
+                Experience the thrill of instant gaming - no downloads required. Jump straight into action with our curated collection of browser games!
             </p>
         </div>
     </header>
 
-    <!-- 游戏区域 -->
+    <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
-        <!-- 游戏框架 -->
-        <div id="loadingMessage" class="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
-            <div class="text-white text-center">
-                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-                <p>游戏加载中，请稍候...</p>
-            </div>
-        </div>
-        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden mb-8">
-            <div class="relative pb-[56.25%] h-0"> <!-- 16:9宽高比 -->
-                <iframe 
-                    src="https://w8.snokido.com/games/html5/friday-night-funkin/0281/index.html"
-                    class="absolute top-0 left-0 w-full h-full border-0"
-                    frameborder="0"
-                    scrolling="no"
-                    allowfullscreen="true"
-                    webkitallowfullscreen="true"
-                    mozallowfullscreen="true"
-                    allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
-                    id="game_embed"
-                    onload="document.getElementById('loadingMessage').style.display='none';"
-                    title="FRIDAY NIGHT FUNKIN在线游戏">
-                </iframe>
-            </div>
-        </div>
-
-        <!-- 添加备用链接 -->
-        <div class="bg-gradient-to-r from-purple-900 to-indigo-900 rounded-lg shadow-xl p-6 mb-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold text-yellow-400 mb-2">无法正常游戏？</h3>
-                    <p class="text-indigo-200">我们提供多个游戏源供您选择，确保最佳游戏体验</p>
-                </div>
-                <div class="flex space-x-4">
-                    <a href="https://www.newgrounds.com/portal/view/770371" target="_blank" 
-                       class="flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition duration-300 shadow-lg hover:shadow-xl">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
-                            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
-                        </svg>
-                        在Newgrounds上玩
-                    </a>
-                    <button onclick="location.reload()" 
-                            class="flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition duration-300 shadow-lg hover:shadow-xl">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                        </svg>
-                        刷新游戏
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 游戏信息 -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- 游戏描述 -->
-            <div class="md:col-span-2 bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h2 class="text-2xl font-bold mb-4 text-yellow-400">游戏介绍</h2>
-                <div class="space-y-4 text-gray-200">
-                    <p>《FRIDAY NIGHT FUNKIN》是一款充满挑战性的节奏音乐游戏，玩家将扮演一位名为Boyfriend的蓝发少年，他必须通过音乐对决赢得女友父母的认可。</p>
-                    
-                    <p>游戏玩法简单而上瘾：跟随屏幕上出现的箭头提示，按下正确的按键，与对手进行音乐对决。每个关卡都有独特的角色和原创音乐，随着游戏的进行，难度会逐渐提升，挑战你的反应能力和节奏感。</p>
-                    
-                    <p>《FRIDAY NIGHT FUNKIN》以其独特的视觉风格、朗朗上口的配乐和具有挑战性的游戏玩法而在独立游戏社区中大受欢迎。无论你是节奏游戏的新手还是老手，这款游戏都能带给你无尽的乐趣！</p>
-                    
-                    <h3 class="text-xl font-bold mt-6 mb-2 text-indigo-300">游戏特色：</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>简单直观的游戏操作 - 使用方向键或WASD进行游戏</li>
-                        <li>丰富多样的角色和原创音乐</li>
-                        <li>独特的卡通艺术风格和引人入胜的故事情节</li>
-                        <li>从简单到困难的多种难度级别</li>
-                        <li>充满挑战性的节奏游戏体验</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- 侧边栏 -->
-            <div class="space-y-6">
-                <!-- 游戏控制 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4 text-yellow-400">游戏控制</h3>
-                    <div class="grid grid-cols-2 gap-2 text-gray-200">
-                        <div class="font-semibold">方向键:</div>
-                        <div>跟随节奏按键</div>
-                        <div class="font-semibold">WASD:</div>
-                        <div>替代控制方式</div>
-                        <div class="font-semibold">空格键:</div>
-                        <div>菜单确认/暂停</div>
-                        <div class="font-semibold">ESC:</div>
-                        <div>返回/退出</div>
+        <!-- Featured Games Grid -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-400">Featured Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Game Card 1: Slope -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/slope-game.jpg" alt="Slope Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Slope</h2>
+                        <p class="text-gray-300 mb-4">Challenge yourself in this fast-paced 3D running game. Test your reflexes as you navigate through increasingly difficult terrain.</p>
+                        <a href="/games/slope" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
                     </div>
                 </div>
-                
-                <!-- 游戏信息卡 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4 text-yellow-400">游戏详情</h3>
-                    <div class="grid grid-cols-2 gap-2 text-gray-200">
-                        <div class="font-semibold">类型:</div>
-                        <div>节奏音乐游戏</div>
-                        <div class="font-semibold">开发者:</div>
-                        <div>ninjamuffin99团队</div>
-                        <div class="font-semibold">平台:</div>
-                        <div>浏览器</div>
-                        <div class="font-semibold">难度:</div>
-                        <div>中等至困难</div>
-                        <div class="font-semibold">适合年龄:</div>
-                        <div>13+</div>
+
+                <!-- Game Card 2: 2048 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/2048-game.jpg" alt="2048 Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">2048</h2>
+                        <p class="text-gray-300 mb-4">Join the numbers and get to the 2048 tile! Are you ready for this addictive puzzle challenge?</p>
+                        <a href="/games/2048" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 3: Retro Bowl -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/retro-bowl.jpg" alt="Retro Bowl Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Retro Bowl</h2>
+                        <p class="text-gray-300 mb-4">Experience the glory of pixel-perfect football in this retro-styled sports management game.</p>
+                        <a href="/games/retro-bowl" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 4: Cookie Clicker -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/cookie-clicker.jpg" alt="Cookie Clicker Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Cookie Clicker</h2>
+                        <p class="text-gray-300 mb-4">Click your way to a cookie empire in this addictive idle game that never ends!</p>
+                        <a href="/games/cookie-clicker" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 5: Wordle -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/wordle.jpg" alt="Wordle Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Wordle</h2>
+                        <p class="text-gray-300 mb-4">Test your vocabulary in this popular word-guessing game. New puzzle every day!</p>
+                        <a href="/games/wordle" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 6: Tetris -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/tetris.jpg" alt="Tetris Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Tetris</h2>
+                        <p class="text-gray-300 mb-4">The classic block-stacking puzzle game that never gets old. How high can you score?</p>
+                        <a href="/games/tetris" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 7: Minecraft Classic -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/minecraft-classic.jpg" alt="Minecraft Classic Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Minecraft Classic</h2>
+                        <p class="text-gray-300 mb-4">Build and explore in the original version of the world's most popular sandbox game.</p>
+                        <a href="/games/minecraft-classic" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 8: Pacman -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/pacman.jpg" alt="Pacman Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Pacman</h2>
+                        <p class="text-gray-300 mb-4">Navigate through mazes, eat dots, and avoid ghosts in this timeless arcade classic.</p>
+                        <a href="/games/pacman" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 9: Flappy Bird -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/flappy-bird.jpg" alt="Flappy Bird Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Flappy Bird</h2>
+                        <p class="text-gray-300 mb-4">Guide your bird through pipes in this challenging and addictive arcade game.</p>
+                        <a href="/games/flappy-bird" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 10: Chess -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/chess.jpg" alt="Chess Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Chess</h2>
+                        <p class="text-gray-300 mb-4">Challenge your mind with the ultimate strategy game. Play against AI or other players.</p>
+                        <a href="/games/chess" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 11: Friday Night Funkin -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="/images/friday-night-funkin.jpg" alt="Friday Night Funkin Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Friday Night Funkin</h2>
+                        <p class="text-gray-300 mb-4">Battle in musical showdowns to impress your girlfriend in this rhythm-based game!</p>
+                        <a href="/games/friday-night-funkin" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-400">Game Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="/categories/action" class="bg-gray-800 p-4 rounded-lg text-center hover:bg-gray-700 transition duration-300">
+                    <span class="block text-xl font-bold text-yellow-400">Action</span>
+                    <span class="text-sm text-gray-400">12 Games</span>
+                </a>
+                <a href="/categories/puzzle" class="bg-gray-800 p-4 rounded-lg text-center hover:bg-gray-700 transition duration-300">
+                    <span class="block text-xl font-bold text-yellow-400">Puzzle</span>
+                    <span class="text-sm text-gray-400">8 Games</span>
+                </a>
+                <!-- Add more categories... -->
+            </div>
+        </section>
+
+        <!-- Top Rated Games -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-400">Top Rated Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Add top rated game cards... -->
+            </div>
+        </section>
     </main>
 
-    <!-- 页脚 -->
-    <footer class="bg-indigo-900 text-gray-300 py-10 mt-10">
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-gray-300 py-10">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 text-white">GamerBlitz</h3>
-                    <p class="mb-4">您的在线游戏目的地，提供最好玩的免费网页游戏！</p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-white">快速链接</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="hover:text-white transition duration-300">首页</a></li>
-                        <li><a href="/top-games" class="hover:text-white transition duration-300">热门游戏</a></li>
-                        <li><a href="/new-games" class="hover:text-white transition duration-300">最新游戏</a></li>
-                        <li><a href="/categories" class="hover:text-white transition duration-300">游戏分类</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-white">游戏分类</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/categories/action" class="hover:text-white transition duration-300">动作游戏</a></li>
-                        <li><a href="/categories/adventure" class="hover:text-white transition duration-300">冒险游戏</a></li>
-                        <li><a href="/categories/puzzle" class="hover:text-white transition duration-300">益智游戏</a></li>
-                        <li><a href="/categories/rhythm" class="hover:text-white transition duration-300">音乐节奏</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-white">关于我们</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/about" class="hover:text-white transition duration-300">关于GamerBlitz</a></li>
-                        <li><a href="/privacy" class="hover:text-white transition duration-300">隐私政策</a></li>
-                        <li><a href="/terms" class="hover:text-white transition duration-300">使用条款</a></li>
-                        <li><a href="/contact" class="hover:text-white transition duration-300">联系我们</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
-                <p>&copy; 2024 GamerBlitz.online - 版权所有。所有游戏的商标和版权属于其各自所有者。</p>
+                <!-- Footer content... -->
             </div>
         </div>
     </footer>
-
-    <!-- 返回顶部按钮 -->
-    <button id="backToTop" class="fixed bottom-5 right-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 shadow-lg transition duration-300 opacity-0 invisible">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
-    </button>
-
-    <!-- 错误处理脚本 -->
-    <script>
-        // 返回顶部按钮
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.remove('opacity-100', 'visible');
-                backToTopButton.classList.add('opacity-0', 'invisible');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // 游戏加载处理
-        window.addEventListener('load', function() {
-            const iframe = document.getElementById('game_embed');
-            const loadingMessage = document.getElementById('loadingMessage');
-            
-            // 设置超时检查
-            setTimeout(function() {
-                if (loadingMessage.style.display !== 'none') {
-                    loadingMessage.innerHTML = `
-                        <div class="text-white text-center p-4">
-                            <p class="text-xl mb-4">😕 游戏加载超时</p>
-                            <p>请尝试刷新页面或使用备用链接</p>
-                            <button onclick="location.reload()" class="mt-4 px-4 py-2 bg-indigo-600 rounded hover:bg-indigo-700 transition duration-300">
-                                刷新页面
-                            </button>
-                        </div>
-                    `;
-                }
-            }, 10000); // 10秒后如果还没加载完显示错误信息
-        });
-    </script>
 </body>
 </html> 
