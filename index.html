@@ -50,15 +50,26 @@
     <!-- 游戏区域 -->
     <main class="container mx-auto px-4 py-8">
         <!-- 游戏框架 -->
+        <div id="loadingMessage" class="absolute inset-0 flex items-center justify-center bg-gray-900 z-10">
+            <div class="text-white text-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+                <p>游戏加载中，请稍候...</p>
+            </div>
+        </div>
         <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden mb-8">
             <div class="relative pb-[56.25%] h-0"> <!-- 16:9宽高比 -->
                 <iframe 
-                    src="https://html-classic.itch.zone/html/2876389-1104083/index.html" 
+                    onload="document.getElementById('loadingMessage').style.display='none';"
+                    src="https://www.newgrounds.com/portal/view/770371/embed/game"
                     class="absolute top-0 left-0 w-full h-full border-0"
-                    allowfullscreen
-                    allow="fullscreen; autoplay; encrypted-media"
-                    title="FRIDAY NIGHT FUNKIN在线游戏"
-                    loading="lazy">
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    mozallowfullscreen="true"
+                    allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
+                    id="game_embed"
+                    title="FRIDAY NIGHT FUNKIN在线游戏">
                 </iframe>
             </div>
         </div>
