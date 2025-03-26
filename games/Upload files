@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play 2048 Online | Addictive Number Puzzle | GamerBlitz</title>
+    <meta name="description" content="Play 2048 online at GamerBlitz! Join the numbers and get to the 2048 tile! Are you ready for this addictive puzzle challenge?">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/2048">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Play 2048 Online | GamerBlitz">
+    <meta property="og:description" content="Join the numbers and get to the 2048 tile! Are you ready for this addictive puzzle challenge?">
+    <meta property="og:url" content="https://gamerblitz.online/games/2048">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gamerblitz.online/images/2048.jpg">
+    <meta property="og:site_name" content="GamerBlitz">
+    
+    <style>
+        /* 强制iframe尺寸 */
+        #gameFrame {
+            width: 100% !important;
+            height: 700px !important;
+            min-height: 700px !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+                GamerBlitz<span class="text-yellow-400">.online</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+                <a href="../categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+                <a href="../top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+                <a href="../new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Game Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Game Title and Info -->
+            <div class="mb-8 text-center">
+                <h1 class="text-4xl font-extrabold mb-4 text-yellow-400">2048</h1>
+                <img src="../images/2048.jpg" alt="2048 Game" class="w-full h-64 object-cover mb-4 rounded-lg">
+                <p class="text-lg text-gray-300 mb-6">Join the numbers and get to the 2048 tile! Are you ready for this addictive puzzle challenge?</p>
+            </div>
+
+            <!-- Game Frame -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
+                <div id="loadingMessage" class="text-center p-4">
+                    <p class="text-xl">Loading Game...</p>
+                    <div class="mt-3 w-12 h-12 border-t-4 border-b-4 border-indigo-500 rounded-full animate-spin mx-auto"></div>
+                </div>
+                
+                <iframe id="gameFrame" 
+                        src="https://www.mathsisfun.com/games/2048.html" 
+                        style="width:100% !important; height:700px !important;" 
+                        class="w-full h-[700px] border-0 rounded-lg shadow-lg"
+                        allow="fullscreen; autoplay; clipboard-write"
+                        allowfullscreen
+                        loading="lazy">
+                </iframe>
+                
+                <script>
+                    // Hide loading message when game loads
+                    document.getElementById('gameFrame').onload = function() {
+                        document.getElementById('loadingMessage').style.display = 'none';
+                    };
+                    
+                    // Show error message if game fails to load
+                    document.getElementById('gameFrame').onerror = function() {
+                        document.getElementById('loadingMessage').innerHTML = `
+                            <div class="text-white text-center p-4">
+                                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                    Retry
+                                </button>
+                            </div>
+                        `;
+                    };
+                </script>
+            </div>
+
+            <!-- Game Controls Guide -->
+            <div class="mt-8 bg-gray-800 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li>Use your <strong>arrow keys</strong> to move the tiles.</li>
+                    <li>When two tiles with the same number touch, they <strong>merge into one</strong>!</li>
+                    <li>Add them up to reach the <strong>2048 tile</strong>.</li>
+                    <li>Plan your moves carefully to keep the game going as long as possible.</li>
+                </ul>
+            </div>
+
+            <!-- Related Games -->
+            <div class="mt-12">
+                <h2 class="text-2xl font-bold mb-6 text-yellow-400">More Games You'll Love</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="chess.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/chess.jpg" alt="Chess" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Chess</h3>
+                    </a>
+                    <a href="tetris.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/tetris.jpg" alt="Tetris" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Tetris</h3>
+                    </a>
+                    <a href="slope.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/slope.jpg" alt="Slope" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Slope</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>© 2023 GamerBlitz.online - Free Online Games</p>
+                <p class="mt-2 text-sm">All games are property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Chess Online | Classic Strategy Game | GamerBlitz</title>
+    <meta name="description" content="Play Chess online at GamerBlitz! Challenge your mind with the ultimate strategy game. Play against AI or other players. Perfect your chess skills!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/chess">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Play Chess Online | GamerBlitz">
+    <meta property="og:description" content="Challenge your mind with the ultimate strategy game. Play against AI or other players.">
+    <meta property="og:url" content="https://gamerblitz.online/games/chess">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gamerblitz.online/images/chess.jpg">
+    <meta property="og:site_name" content="GamerBlitz">
+    
+    <style>
+        /* 强制iframe尺寸 */
+        #gameFrame {
+            width: 100% !important;
+            height: 700px !important;
+            min-height: 700px !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+                GamerBlitz<span class="text-yellow-400">.online</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+                <a href="../categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+                <a href="../top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+                <a href="../new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Game Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Game Title and Info -->
+            <div class="mb-8 text-center">
+                <h1 class="text-4xl font-extrabold mb-4 text-yellow-400">Chess</h1>
+                <img src="../images/chess.jpg" alt="Chess Game" class="w-full h-64 object-cover mb-4 rounded-lg">
+                <p class="text-lg text-gray-300 mb-6">Challenge your mind with the ultimate strategy game. Play against AI or other players. Perfect your chess skills!</p>
+            </div>
+
+            <!-- Game Frame -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
+                <div id="loadingMessage" class="text-center p-4">
+                    <p class="text-xl">Loading Game...</p>
+                    <div class="mt-3 w-12 h-12 border-t-4 border-b-4 border-indigo-500 rounded-full animate-spin mx-auto"></div>
+                </div>
+                
+                <iframe id="gameFrame" 
+                        src="https://www.crazygames.com/embed/chess-master" 
+                        style="width:100% !important; height:700px !important;" 
+                        class="w-full h-[700px] border-0 rounded-lg shadow-lg"
+                        allow="fullscreen; autoplay; clipboard-write"
+                        allowfullscreen
+                        loading="lazy">
+                </iframe>
+                
+                <script>
+                    // Hide loading message when game loads
+                    document.getElementById('gameFrame').onload = function() {
+                        document.getElementById('loadingMessage').style.display = 'none';
+                    };
+                    
+                    // Show error message if game fails to load
+                    document.getElementById('gameFrame').onerror = function() {
+                        document.getElementById('loadingMessage').innerHTML = `
+                            <div class="text-white text-center p-4">
+                                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                    Retry
+                                </button>
+                            </div>
+                        `;
+                    };
+                </script>
+            </div>
+
+            <!-- Game Controls Guide -->
+            <div class="mt-8 bg-gray-800 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li>White moves first, then players alternate turns</li>
+                    <li>Each piece has its own unique way of moving</li>
+                    <li>Capture opponent's pieces by moving to their square</li>
+                    <li>Protect your king from checkmate to win</li>
+                    <li>Game ends in stalemate if king isn't in check but has no legal moves</li>
+                </ul>
+            </div>
+
+            <!-- Related Games -->
+            <div class="mt-12">
+                <h2 class="text-2xl font-bold mb-6 text-yellow-400">More Games You'll Love</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="2048.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/2048.jpg" alt="2048" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">2048</h3>
+                    </a>
+                    <a href="pacman.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/pacman.jpg" alt="Pacman" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Pacman</h3>
+                    </a>
+                    <a href="tetris.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/tetris.jpg" alt="Tetris" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Tetris</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>© 2023 GamerBlitz.online - Free Online Games</p>
+                <p class="mt-2 text-sm">All games are property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Cookie Clicker Online | GamerBlitz</title>
+    <meta name="description" content="Play Cookie Clicker online at GamerBlitz! Click your way to a cookie empire in this addictive idle game that never ends.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/cookie-clicker">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Play Cookie Clicker Online | GamerBlitz">
+    <meta property="og:description" content="Click your way to a cookie empire in this addictive idle game that never ends!">
+    <meta property="og:url" content="https://gamerblitz.online/games/cookie-clicker">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gamerblitz.online/images/cookie-clicker.jpg">
+    <meta property="og:site_name" content="GamerBlitz">
+    
+    <style>
+        /* 强制iframe尺寸 */
+        #gameFrame {
+            width: 100% !important;
+            height: 700px !important;
+            min-height: 700px !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+                GamerBlitz<span class="text-yellow-400">.online</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+                <a href="../categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+                <a href="../top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+                <a href="../new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Game Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Game Title and Info -->
+            <div class="mb-8 text-center">
+                <h1 class="text-4xl font-extrabold mb-4 text-yellow-400">Cookie Clicker</h1>
+                <img src="../images/cookie-clicker.jpg" alt="Cookie Clicker Game" class="w-full h-64 object-cover mb-4 rounded-lg">
+                <p class="text-lg text-gray-300 mb-6">Click your way to a cookie empire in this addictive idle game that never ends! Bake cookies, upgrade your production, and watch your cookie count rise.</p>
+            </div>
+
+            <!-- Game Frame -->
+            <div class="bg-gray-800 rounded-lg p-8 text-center">
+                <img src="../images/cookie-clicker.jpg" alt="Cookie Clicker游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
+                <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
+                <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                    开始玩Cookie Clicker
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+            </div>
+
+            <!-- Game Controls Guide -->
+            <div class="mt-8 bg-gray-800 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li><strong>Click the cookie</strong> to produce cookies.</li>
+                    <li>Use your cookies to <strong>purchase upgrades</strong> and buildings.</li>
+                    <li>Buildings produce cookies automatically over time.</li>
+                    <li>Unlock achievements and discover new game mechanics as you progress.</li>
+                </ul>
+            </div>
+
+            <!-- Related Games -->
+            <div class="mt-12">
+                <h2 class="text-2xl font-bold mb-6 text-yellow-400">More Games You'll Love</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="2048.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/2048.jpg" alt="2048" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">2048</h3>
+                    </a>
+                    <a href="chess.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/chess.jpg" alt="Chess" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Chess</h3>
+                    </a>
+                    <a href="tetris.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/tetris.jpg" alt="Tetris" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Tetris</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>© 2023 GamerBlitz.online - Free Online Games</p>
+                <p class="mt-2 text-sm">All games are property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Flappy Bird Online | Addictive Arcade Game | GamerBlitz</title>
+    <meta name="description" content="Play Flappy Bird online at GamerBlitz! Guide your bird through pipes in this challenging and addictive arcade game. Test your reflexes and beat your high score!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/flappy-bird">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <!-- ... Navigation content ... -->
+    </nav>
+
+    <!-- Game Title Section -->
+    <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                Flappy Bird
+            </h1>
+            <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
+                The addictive tap game that took the world by storm!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Game Frame -->
+        <div class="bg-gray-800 rounded-lg p-8 text-center">
+            <img src="../images/flappy-bird.jpg" alt="Flappy Bird游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
+            <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
+            <a href="https://flappybird.io" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                开始玩Flappy Bird
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+        </div>
+
+        <!-- Game Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Game Description -->
+            <div class="md:col-span-2 space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Game Description</h2>
+                    <div class="prose prose-invert max-w-none">
+                        <p class="mb-4">Flappy Bird is a side-scrolling game where you control a bird, attempting to fly between rows of green pipes without hitting them. Each successful pass through a pair of pipes earns you a point.</p>
+                        <p class="mb-4">With its simple yet challenging gameplay mechanics, Flappy Bird became a global phenomenon, known for being easy to learn but incredibly difficult to master.</p>
+                    </div>
+                </div>
+
+                <!-- How to Play -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Press SPACE or click/tap to make the bird flap</li>
+                        <li>Navigate through the gaps between pipes</li>
+                        <li>Avoid touching the pipes or the ground</li>
+                        <li>Each pipe passed equals one point</li>
+                        <li>Try to beat your high score!</li>
+                    </ul>
+                </div>
+
+                <!-- Tips and Strategies -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Pro Tips & Strategies</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Tap rhythmically to maintain steady flight</li>
+                        <li>Focus on the next gap, not the bird</li>
+                        <li>Keep your taps light and controlled</li>
+                        <li>Practice timing between pipes</li>
+                        <li>Stay calm and don't panic tap</li>
+                    </ul>
+                </div>
+
+                <!-- Score Guide -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Score Rankings</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-green-400 font-bold mb-2">Beginner: 0-10</h3>
+                            <p class="text-gray-300">Still learning the basics</p>
+                        </div>
+                        <div>
+                            <h3 class="text-blue-400 font-bold mb-2">Intermediate: 11-20</h3>
+                            <p class="text-gray-300">Getting the hang of it</p>
+                        </div>
+                        <div>
+                            <h3 class="text-purple-400 font-bold mb-2">Advanced: 21-30</h3>
+                            <p class="text-gray-300">Skilled player</p>
+                        </div>
+                        <div>
+                            <h3 class="text-yellow-400 font-bold mb-2">Expert: 31+</h3>
+                            <p class="text-gray-300">Master of Flappy Bird</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Game Details -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Game Details</h3>
+                    <div class="grid grid-cols-2 gap-2 text-gray-300">
+                        <div class="font-semibold">Category:</div>
+                        <div>Arcade</div>
+                        <div class="font-semibold">Platform:</div>
+                        <div>Browser</div>
+                        <div class="font-semibold">Controls:</div>
+                        <div>Space/Click</div>
+                        <div class="font-semibold">Release Year:</div>
+                        <div>2013</div>
+                        <div class="font-semibold">Developer:</div>
+                        <div>Dong Nguyen</div>
+                    </div>
+                </div>
+
+                <!-- High Scores -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Global High Scores</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-300">FlappyKing</span>
+                            <span class="text-yellow-400">42</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-300">BirdMaster</span>
+                            <span class="text-yellow-400">38</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-300">PipePro</span>
+                            <span class="text-yellow-400">35</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar Games -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Similar Games</h3>
+                    <div class="space-y-4">
+                        <a href="/games/slope" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Slope</div>
+                            <div class="text-sm text-gray-400">Action Arcade</div>
+                        </a>
+                        <a href="/games/pacman" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Pacman</div>
+                            <div class="text-sm text-gray-400">Classic Arcade</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <!-- ... Footer content ... -->
+    </footer>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Friday Night Funkin Online | Rhythm Music Game | GamerBlitz</title>
+    <meta name="description" content="Play Friday Night Funkin online at GamerBlitz! Test your rhythm skills in this popular music battle game. Hit the beat, impress your girlfriend, and defeat your rivals!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/friday-night-funkin">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <!-- ... Navigation content ... -->
+    </nav>
+
+    <!-- Game Title Section -->
+    <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                Friday Night Funkin
+            </h1>
+            <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
+                Battle with your rhythm in this epic music showdown!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Game Frame -->
+        <div class="bg-gray-800 rounded-lg p-8 text-center">
+            <img src="../images/friday-night-funkin.jpg" alt="Friday Night Funkin游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
+            <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
+            <a href="https://www.newgrounds.com/portal/view/770371" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                开始玩Friday Night Funkin
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+        </div>
+
+        <!-- Game Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Game Description -->
+            <div class="md:col-span-2 space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Game Description</h2>
+                    <div class="prose prose-invert max-w-none">
+                        <p class="mb-4">Friday Night Funkin is a rhythm-based music game where you play as Boyfriend, who must battle against various opponents in musical duels to win the heart of his Girlfriend. Each week presents new characters and music tracks to master.</p>
+                        <p class="mb-4">With its distinctive cartoon art style, catchy music, and challenging gameplay, Friday Night Funkin has become one of the most popular indie rhythm games in recent years.</p>
+                    </div>
+                </div>
+
+                <!-- Game Controls -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Controls</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Basic Controls</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Arrow Keys - Hit notes</li>
+                                <li>A/S/↑/↓ - Alternative controls</li>
+                                <li>Enter - Confirm selections</li>
+                                <li>Escape - Pause game</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Game Modes</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Story Mode - Play through weeks</li>
+                                <li>Freeplay - Choose any song</li>
+                                <li>Multiple difficulty levels</li>
+                                <li>Custom mods support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategy Guide -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Strategy Guide</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Master the Timing</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Focus on the arrow timing rather than the music</li>
+                                <li>Practice each song several times</li>
+                                <li>Start with easier songs to build muscle memory</li>
+                                <li>Try to anticipate note patterns</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Difficulty Progression</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Begin with Easy difficulty for new songs</li>
+                                <li>Moving to Normal once comfortable</li>
+                                <li>Hard difficulty requires perfect timing</li>
+                                <li>Take breaks to avoid hand strain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Tips -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Pro Tips</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Keep your eyes focused on the arrow guides, not the characters</li>
+                        <li>Use the practice mode to master difficult sections</li>
+                        <li>For complex patterns, try to develop a rhythm rather than hitting individual notes</li>
+                        <li>Adjust your setup for comfort during longer sessions</li>
+                        <li>Listen to the songs outside the game to familiarize yourself with the rhythms</li>
+                    </ul>
+                </div>
+                
+                <!-- Character Guide -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Characters Guide</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Main Characters</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Boyfriend - The player character</li>
+                                <li>Girlfriend - Sits on the speakers, judges battles</li>
+                                <li>Daddy Dearest - Girlfriend's father, Week 1 opponent</li>
+                                <li>Mommy Mearest - Girlfriend's mother, Week 4 opponent</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Notable Opponents</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Pico - Former boyfriend, Week 3 opponent</li>
+                                <li>Skid & Pump - Halloween kids, Week 2 opponents</li>
+                                <li>Tankman - Week 7 opponent</li>
+                                <li>Whitty, Tricky - Popular mod characters</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Game Details -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Game Details</h3>
+                    <div class="grid grid-cols-2 gap-2 text-gray-300">
+                        <div class="font-semibold">Category:</div>
+                        <div>Rhythm</div>
+                        <div class="font-semibold">Developer:</div>
+                        <div>Newgrounds Team</div>
+                        <div class="font-semibold">Release:</div>
+                        <div>2020</div>
+                        <div class="font-semibold">Platform:</div>
+                        <div>Browser</div>
+                        <div class="font-semibold">Controls:</div>
+                        <div>Keyboard</div>
+                    </div>
+                </div>
+
+                <!-- Game Features -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Key Features</h3>
+                    <div class="space-y-2">
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Weekly Content</h4>
+                            <p class="text-sm text-gray-300">New characters and music</p>
+                        </div>
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Unique Art Style</h4>
+                            <p class="text-sm text-gray-300">Flash-inspired animations</p>
+                        </div>
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Original Soundtrack</h4>
+                            <p class="text-sm text-gray-300">Catchy beats and vocals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Songs -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Fan-Favorite Songs</h3>
+                    <div class="space-y-2">
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Philly Nice</h4>
+                            <p class="text-sm text-gray-300">Week 3 - Pico</p>
+                        </div>
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">M.I.L.F</h4>
+                            <p class="text-sm text-gray-300">Week 4 - Mommy Mearest</p>
+                        </div>
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Ballistic</h4>
+                            <p class="text-sm text-gray-300">Whitty Mod - Challenging!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar Games -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Similar Games</h3>
+                    <div class="space-y-4">
+                        <a href="/games/cookie-clicker" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Cookie Clicker</div>
+                            <div class="text-sm text-gray-400">Casual Game</div>
+                        </a>
+                        <a href="/games/retro-bowl" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Retro Bowl</div>
+                            <div class="text-sm text-gray-400">Sports Game</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <!-- ... Footer content ... -->
+    </footer>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Minecraft Classic Online | Free Browser Version | GamerBlitz</title>
+    <meta name="description" content="Play Minecraft Classic online at GamerBlitz! Experience the original creative building game that started it all. Build, explore, and create in your browser!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/minecraft-classic">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <!-- ... Navigation content ... -->
+    </nav>
+
+    <!-- Game Title Section -->
+    <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                Minecraft Classic
+            </h1>
+            <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
+                Build anything you can imagine in this timeless creative sandbox!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Game Frame -->
+        <div class="bg-gray-800 rounded-lg p-8 text-center">
+            <img src="../images/minecraft-classic.jpg" alt="Minecraft Classic游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
+            <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
+            <a href="https://classic.minecraft.net/" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                开始玩Minecraft Classic
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+        </div>
+
+        <!-- Game Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Game Description -->
+            <div class="md:col-span-2 space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Game Description</h2>
+                    <div class="prose prose-invert max-w-none">
+                        <p class="mb-4">Minecraft Classic is the original version of the world-famous building game. In this creative mode, you have unlimited blocks to build whatever you can imagine. Create structures, landscapes, and entire worlds block by block.</p>
+                        <p class="mb-4">This browser version lets you experience the pure, simple joy of creative building that made Minecraft a global phenomenon.</p>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Controls</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Movement</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>W - Move forward</li>
+                                <li>S - Move backward</li>
+                                <li>A - Move left</li>
+                                <li>D - Move right</li>
+                                <li>Space - Jump</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Building</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Left Click - Place block</li>
+                                <li>Right Click - Remove block</li>
+                                <li>Mouse - Look around</li>
+                                <li>Number Keys - Select block type</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Building Tips -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Building Tips</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Plan your builds before starting</li>
+                        <li>Use different block types for texture</li>
+                        <li>Build in layers for complex structures</li>
+                        <li>Create patterns for interesting designs</li>
+                        <li>Use symmetry for balanced buildings</li>
+                        <li>Start with a foundation</li>
+                    </ul>
+                </div>
+
+                <!-- Project Ideas -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Project Ideas</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Buildings</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Castle</li>
+                                <li>Modern House</li>
+                                <li>Skyscraper</li>
+                                <li>Bridge</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Landscapes</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Mountain Range</li>
+                                <li>Forest</li>
+                                <li>Island</li>
+                                <li>Garden</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Game Details -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Game Details</h3>
+                    <div class="grid grid-cols-2 gap-2 text-gray-300">
+                        <div class="font-semibold">Category:</div>
+                        <div>Sandbox</div>
+                        <div class="font-semibold">Players:</div>
+                        <div>Single Player</div>
+                        <div class="font-semibold">Release:</div>
+                        <div>2009</div>
+                        <div class="font-semibold">Developer:</div>
+                        <div>Mojang</div>
+                        <div class="font-semibold">Blocks:</div>
+                        <div>32 Types</div>
+                    </div>
+                </div>
+
+                <!-- Block Types -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Popular Blocks</h3>
+                    <div class="space-y-2">
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Stone</h4>
+                            <p class="text-sm text-gray-300">Basic building material</p>
+                        </div>
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Wood</h4>
+                            <p class="text-sm text-gray-300">Great for structures</p>
+                        </div>
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Glass</h4>
+                            <p class="text-sm text-gray-300">Perfect for windows</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar Games -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Similar Games</h3>
+                    <div class="space-y-4">
+                        <a href="/games/cookie-clicker" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Cookie Clicker</div>
+                            <div class="text-sm text-gray-400">Idle Game</div>
+                        </a>
+                        <a href="/games/2048" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">2048</div>
+                            <div class="text-sm text-gray-400">Puzzle Game</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <!-- ... Footer content ... -->
+    </footer>
+
+    <!-- Add necessary JavaScript -->
+    <script>
+    // Game error handling
+    function handleGameError() {
+        document.getElementById('loadingMessage').innerHTML = `
+            <div class="text-white text-center p-4">
+                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    Retry
+                </button>
+            </div>
+        `;
+    }
+    </script>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Pacman Online | Classic Arcade Game | GamerBlitz</title>
+    <meta name="description" content="Play the classic Pacman arcade game online at GamerBlitz! Navigate through mazes, eat dots, and avoid ghosts in this timeless gaming experience. No download needed!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/pacman">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <!-- ... Navigation content ... -->
+    </nav>
+
+    <!-- Game Title Section -->
+    <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                Pacman
+            </h1>
+            <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
+                The iconic maze chase that defined a gaming generation!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Game Frame -->
+        <div class="bg-gray-800 rounded-lg p-8 text-center">
+            <img src="../images/pacman.jpg" alt="Pacman游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
+            <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
+            <a href="https://www.google.com/logos/2010/pacman10-i.html" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                开始玩Pacman
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+        </div>
+
+        <!-- Game Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Game Description -->
+            <div class="md:col-span-2 space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Game Description</h2>
+                    <div class="prose prose-invert max-w-none">
+                        <p class="mb-4">Pacman is one of the most iconic arcade games ever created. Guide Pacman through the maze, eating dots while avoiding colorful ghosts. Power pellets temporarily turn the tables, allowing you to chase and eat the ghosts for bonus points.</p>
+                        <p class="mb-4">Released in 1980, Pacman revolutionized the gaming industry and remains one of the most recognizable video game characters to this day.</p>
+                    </div>
+                </div>
+
+                <!-- How to Play -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Use arrow keys to move Pacman through the maze</li>
+                        <li>Eat all the dots to complete each level</li>
+                        <li>Avoid the ghosts - they'll cost you a life if they catch you</li>
+                        <li>Eat power pellets to turn ghosts blue and vulnerable</li>
+                        <li>Eat fruit for bonus points when they appear</li>
+                    </ul>
+                </div>
+
+                <!-- Advanced Strategies -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Pro Tips & Strategies</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Learn ghost behavior patterns - each ghost has unique movement</li>
+                        <li>Use tunnels to escape when cornered</li>
+                        <li>Time your power pellet consumption strategically</li>
+                        <li>Clear dots in organized patterns to maximize efficiency</li>
+                        <li>Keep track of ghost respawn timing after eating them</li>
+                    </ul>
+                </div>
+
+                <!-- Ghost Guide -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Know Your Ghosts</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-red-400 font-bold mb-2">Blinky (Red)</h3>
+                            <p class="text-gray-300">Aggressively chases Pacman directly</p>
+                        </div>
+                        <div>
+                            <h3 class="text-pink-400 font-bold mb-2">Pinky (Pink)</h3>
+                            <p class="text-gray-300">Tries to ambush by moving ahead of Pacman</p>
+                        </div>
+                        <div>
+                            <h3 class="text-cyan-400 font-bold mb-2">Inky (Cyan)</h3>
+                            <p class="text-gray-300">Uses complex patterns to trap Pacman</p>
+                        </div>
+                        <div>
+                            <h3 class="text-orange-400 font-bold mb-2">Clyde (Orange)</h3>
+                            <p class="text-gray-300">Moves randomly, unpredictable behavior</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Game Details -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Game Details</h3>
+                    <div class="grid grid-cols-2 gap-2 text-gray-300">
+                        <div class="font-semibold">Category:</div>
+                        <div>Arcade Classic</div>
+                        <div class="font-semibold">Platform:</div>
+                        <div>Browser</div>
+                        <div class="font-semibold">Controls:</div>
+                        <div>Arrow Keys</div>
+                        <div class="font-semibold">Release Year:</div>
+                        <div>1980</div>
+                        <div class="font-semibold">Developer:</div>
+                        <div>Namco</div>
+                    </div>
+                </div>
+
+                <!-- High Scores -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Today's Top Scores</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-300">PAC_MASTER</span>
+                            <span class="text-yellow-400">246,900</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-300">GhostHunter</span>
+                            <span class="text-yellow-400">198,740</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-300">DotEater99</span>
+                            <span class="text-yellow-400">167,520</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar Games -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Similar Games</h3>
+                    <div class="space-y-4">
+                        <a href="/games/slope" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Slope</div>
+                            <div class="text-sm text-gray-400">Action Arcade</div>
+                        </a>
+                        <a href="/games/tetris" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Tetris</div>
+                            <div class="text-sm text-gray-400">Classic Arcade</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <!-- ... Footer content ... -->
+    </footer>
+
+    <!-- Add necessary JavaScript -->
+    <script>
+    // Game error handling
+    function handleGameError() {
+        document.getElementById('loadingMessage').innerHTML = `
+            <div class="text-white text-center p-4">
+                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    Retry
+                </button>
+            </div>
+        `;
+    }
+    </script>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Retro Bowl Online | Classic American Football Game | GamerBlitz</title>
+    <meta name="description" content="Play Retro Bowl online at GamerBlitz! Lead your team to victory in this retro-style American football game. Manage your team, make strategic plays, and win championships!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/retro-bowl">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <!-- ... Navigation content ... -->
+    </nav>
+
+    <!-- Game Title Section -->
+    <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                Retro Bowl
+            </h1>
+            <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
+                Experience the glory of pixel-perfect American Football!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Game Frame -->
+        <div class="bg-gray-800 rounded-lg p-8 text-center">
+            <img src="../images/retro-bowl.jpg" alt="Retro Bowl游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
+            <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
+            <a href="https://retro-bowl.com/" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                开始玩Retro Bowl
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+        </div>
+
+        <!-- Game Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Game Description -->
+            <div class="md:col-span-2 space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Game Description</h2>
+                    <div class="prose prose-invert max-w-none">
+                        <p class="mb-4">Retro Bowl is a pixel-perfect tribute to classic American football games. Take control of your favorite team, manage your roster, and lead them to glory through a challenging season of strategic gameplay.</p>
+                        <p class="mb-4">With its perfect blend of management and arcade-style gameplay, Retro Bowl offers both quick matches and deep career progression that will keep you coming back for "just one more game."</p>
+                    </div>
+                </div>
+
+                <!-- Game Controls -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Controls</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Offense</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Drag to aim passes</li>
+                                <li>Release to throw</li>
+                                <li>Tap player to switch control</li>
+                                <li>Swipe to dodge tackles</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Management</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Tap menus to navigate</li>
+                                <li>Select plays from playbook</li>
+                                <li>Manage team roster</li>
+                                <li>Handle team facilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategy Guide -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Strategy Guide</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Team Management</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Prioritize quarterback development</li>
+                                <li>Balance offense and defense spending</li>
+                                <li>Keep team morale high</li>
+                                <li>Scout young talent for future</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-indigo-300 font-bold mb-2">Game Tactics</h3>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li>Mix up your play calling</li>
+                                <li>Use timeouts strategically</li>
+                                <li>Go for 2-point conversions when behind</li>
+                                <li>Protect your quarterback</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Tips -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Pro Tips</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Invest in training facilities early</li>
+                        <li>Build team chemistry through consistent lineups</li>
+                        <li>Save salary cap space for star players</li>
+                        <li>Use practice games to test new strategies</li>
+                        <li>Monitor player condition to prevent injuries</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Game Details -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Game Details</h3>
+                    <div class="grid grid-cols-2 gap-2 text-gray-300">
+                        <div class="font-semibold">Category:</div>
+                        <div>Sports</div>
+                        <div class="font-semibold">Developer:</div>
+                        <div>New Star Games</div>
+                        <div class="font-semibold">Release:</div>
+                        <div>2020</div>
+                        <div class="font-semibold">Platform:</div>
+                        <div>Browser</div>
+                        <div class="font-semibold">Controls:</div>
+                        <div>Mouse/Touch</div>
+                    </div>
+                </div>
+
+                <!-- Game Features -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Key Features</h3>
+                    <div class="space-y-2">
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Career Mode</h4>
+                            <p class="text-sm text-gray-300">Build your legacy as a coach</p>
+                        </div>
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Team Management</h4>
+                            <p class="text-sm text-gray-300">Handle trades and drafts</p>
+                        </div>
+                        <div class="p-2 bg-gray-700 rounded">
+                            <h4 class="font-bold text-indigo-300">Dynamic Season</h4>
+                            <p class="text-sm text-gray-300">Every game matters</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar Games -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Similar Games</h3>
+                    <div class="space-y-4">
+                        <a href="/games/slope" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Slope</div>
+                            <div class="text-sm text-gray-400">Action Game</div>
+                        </a>
+                        <a href="/games/minecraft-classic" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Minecraft Classic</div>
+                            <div class="text-sm text-gray-400">Building Game</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <!-- ... Footer content ... -->
+    </footer>
+
+    <!-- Add necessary JavaScript -->
+    <script>
+    // Game error handling
+    function handleGameError() {
+        document.getElementById('loadingMessage').innerHTML = `
+            <div class="text-white text-center p-4">
+                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    Retry
+                </button>
+            </div>
+        `;
+    }
+    </script>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Slope Online | Fast-Paced 3D Runner | GamerBlitz</title>
+    <meta name="description" content="Play Slope online at GamerBlitz! Challenge yourself in this fast-paced 3D running game. Test your reflexes as you navigate through increasingly difficult terrain.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/slope">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Play Slope Online | GamerBlitz">
+    <meta property="og:description" content="Challenge yourself in this fast-paced 3D running game. Test your reflexes!">
+    <meta property="og:url" content="https://gamerblitz.online/games/slope">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gamerblitz.online/images/slope.jpg">
+    <meta property="og:site_name" content="GamerBlitz">
+    
+    <style>
+        /* 强制iframe尺寸 */
+        #gameFrame {
+            width: 100% !important;
+            height: 700px !important;
+            min-height: 700px !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+                GamerBlitz<span class="text-yellow-400">.online</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+                <a href="../categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+                <a href="../top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+                <a href="../new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Game Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Game Title and Info -->
+            <div class="mb-8 text-center">
+                <h1 class="text-4xl font-extrabold mb-4 text-yellow-400">Slope</h1>
+                <img src="../images/slope.jpg" alt="Slope Game" class="w-full h-64 object-cover mb-4 rounded-lg">
+                <p class="text-lg text-gray-300 mb-6">Challenge yourself in this fast-paced 3D running game. Test your reflexes as you navigate through increasingly difficult terrain.</p>
+            </div>
+
+            <!-- Game Frame -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
+                <div id="loadingMessage" class="text-center p-4">
+                    <p class="text-xl">Loading Game...</p>
+                    <div class="mt-3 w-12 h-12 border-t-4 border-b-4 border-indigo-500 rounded-full animate-spin mx-auto"></div>
+                </div>
+                
+                <iframe id="gameFrame" 
+                        src="https://slope-game.github.io/" 
+                        style="width:100% !important; height:700px !important;" 
+                        class="w-full h-[700px] border-0 rounded-lg shadow-lg"
+                        allow="fullscreen; autoplay; clipboard-write"
+                        allowfullscreen
+                        loading="lazy">
+                </iframe>
+                
+                <script>
+                    // Hide loading message when game loads
+                    document.getElementById('gameFrame').onload = function() {
+                        document.getElementById('loadingMessage').style.display = 'none';
+                    };
+                    
+                    // Show error message if game fails to load
+                    document.getElementById('gameFrame').onerror = function() {
+                        document.getElementById('loadingMessage').innerHTML = `
+                            <div class="text-white text-center p-4">
+                                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                    Retry
+                                </button>
+                            </div>
+                        `;
+                    };
+                </script>
+            </div>
+
+            <!-- Game Controls Guide -->
+            <div class="mt-8 bg-gray-800 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li>Use the <strong>arrow keys</strong> or <strong>A/D keys</strong> to control your ball.</li>
+                    <li>Avoid obstacles and stay on the track.</li>
+                    <li>The game gradually gets faster as you progress.</li>
+                    <li>Try to beat your high score with each attempt!</li>
+                </ul>
+            </div>
+
+            <!-- Related Games -->
+            <div class="mt-12">
+                <h2 class="text-2xl font-bold mb-6 text-yellow-400">More Games You'll Love</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="flappy-bird.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/flappy-bird.jpg" alt="Flappy Bird" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Flappy Bird</h3>
+                    </a>
+                    <a href="retro-bowl.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/retro-bowl.jpg" alt="Retro Bowl" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Retro Bowl</h3>
+                    </a>
+                    <a href="2048.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/2048.jpg" alt="2048" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">2048</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>© 2023 GamerBlitz.online - Free Online Games</p>
+                <p class="mt-2 text-sm">All games are property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
+    </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Wordle Online | Daily Word Puzzle Game | GamerBlitz</title>
+    <meta name="description" content="Play Wordle online at GamerBlitz! Challenge yourself with a new word puzzle every day. Guess the hidden word in six tries or less. Free to play!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/wordle">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <!-- ... Navigation content ... -->
+    </nav>
+
+    <!-- Game Title Section -->
+    <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                Wordle
+            </h1>
+            <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
+                Test your vocabulary with a new word puzzle every day!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Game Frame -->
+        <div class="bg-gray-800 rounded-lg p-8 text-center">
+            <img src="../images/wordle.jpg" alt="Wordle游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
+            <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
+            <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                开始玩Wordle
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+        </div>
+
+        <!-- Game Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Game Description -->
+            <div class="md:col-span-2 space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Game Description</h2>
+                    <div class="prose prose-invert max-w-none">
+                        <p class="mb-4">Wordle is a daily word puzzle that challenges players to guess a five-letter word in six attempts or less. After each guess, the game provides feedback using colors: green for correct letters in the right position, yellow for correct letters in the wrong position, and gray for letters not in the word.</p>
+                        <p class="mb-4">With a new puzzle available every day, Wordle has become a global phenomenon that brings together word enthusiasts and casual players alike in a shared daily challenge.</p>
+                    </div>
+                </div>
+
+                <!-- How to Play -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Type a five-letter word and press Enter</li>
+                        <li>Green squares indicate correct letters in the right spot</li>
+                        <li>Yellow squares show correct letters in the wrong position</li>
+                        <li>Gray squares mean those letters aren't in the word</li>
+                        <li>You have six attempts to guess the word</li>
+                    </ul>
+                </div>
+
+                <!-- Tips and Strategies -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Winning Strategies</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Start with words containing common letters (E, A, R, T, S)</li>
+                        <li>Use your first guess to eliminate multiple vowels</li>
+                        <li>Pay attention to letter patterns and common word endings</li>
+                        <li>Don't repeat letters in your early guesses</li>
+                        <li>Keep track of eliminated letters</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Game Details -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Game Details</h3>
+                    <div class="grid grid-cols-2 gap-2 text-gray-300">
+                        <div class="font-semibold">Category:</div>
+                        <div>Word Puzzle</div>
+                        <div class="font-semibold">Platform:</div>
+                        <div>Browser</div>
+                        <div class="font-semibold">Controls:</div>
+                        <div>Keyboard</div>
+                        <div class="font-semibold">Difficulty:</div>
+                        <div>Moderate</div>
+                        <div class="font-semibold">Daily Limit:</div>
+                        <div>One puzzle per day</div>
+                    </div>
+                </div>
+
+                <!-- Similar Games -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Similar Games</h3>
+                    <div class="space-y-4">
+                        <a href="/games/2048" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">2048</div>
+                            <div class="text-sm text-gray-400">Number Puzzle</div>
+                        </a>
+                        <a href="/games/tetris" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Tetris</div>
+                            <div class="text-sm text-gray-400">Block Puzzle</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Daily Stats -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Today's Stats</h3>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-indigo-300 mb-2" id="playersToday">12,458</div>
+                        <div class="text-sm text-gray-400">Players Today</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <!-- ... Footer content ... -->
+    </footer>
+
+    <!-- Add necessary JavaScript -->
+    <script>
+    // Game error handling
+    function handleGameError() {
+        document.getElementById('loadingMessage').innerHTML = `
+            <div class="text-white text-center p-4">
+                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    Retry
+                </button>
+            </div>
+        `;
+    }
+    </script>
+</body>
+</html> 
