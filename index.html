@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerBlitz - Your Ultimate Online Gaming Destination | Free Browser Games</title>
+    <meta name="description" content="Play the best free online games at GamerBlitz. Experience thrilling browser games including Slope, 2048, Retro Bowl, and more. No downloads required!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="GamerBlitz - Play Free Online Games">
+    <meta property="og:description" content="Instant access to the best free browser games. No downloads needed.">
+    <meta property="og:url" content="https://gamerblitz.online">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GamerBlitz">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+                GamerBlitz<span class="text-yellow-400">.online</span>
+            </a>
+            
+            <!-- Search Bar -->
+            <div class="order-3 mt-4 w-full md:w-auto md:order-2 md:mt-0">
+                <div class="relative">
+                    <input type="search" 
+                           placeholder="Search games..." 
+                           class="w-full md:w-64 px-4 py-2 bg-gray-800 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <button class="absolute right-3 top-2">
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6 order-2 md:order-3">
+                <a href="index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+                <a href="categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+                <a href="top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+                <a href="new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none order-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-12 bg-gradient-to-r from-purple-800 to-indigo-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                GamerBlitz: Dive into the latest and most thrilling games for a fast-paced, competitive edge!
+            </h1>
+            <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
+                Experience the thrill of instant gaming - no downloads required. Jump straight into action with our curated collection of browser games!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Featured Games Grid -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-400">Featured Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Game Card 1: Chess -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/chess.jpg" alt="Chess Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Chess</h2>
+                        <p class="text-gray-300 mb-4">Challenge your mind with the ultimate strategy game. Play against AI or other players.</p>
+                        <a href="games/chess.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 2: 2048 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/2048.jpg" alt="2048 Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">2048</h2>
+                        <p class="text-gray-300 mb-4">Join the numbers and get to the 2048 tile! Are you ready for this addictive puzzle challenge?</p>
+                        <a href="games/2048.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 3: Slope -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/slope.jpg" alt="Slope Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Slope</h2>
+                        <p class="text-gray-300 mb-4">Challenge yourself in this fast-paced 3D running game. Test your reflexes as you navigate through increasingly difficult terrain.</p>
+                        <a href="games/slope.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 4: Retro Bowl -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/retro-bowl.jpg" alt="Retro Bowl Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Retro Bowl</h2>
+                        <p class="text-gray-300 mb-4">Experience the glory of pixel-perfect football in this retro-styled sports management game.</p>
+                        <a href="games/retro-bowl.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 5: Cookie Clicker -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/cookie-clicker.jpg" alt="Cookie Clicker Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Cookie Clicker</h2>
+                        <p class="text-gray-300 mb-4">Click your way to a cookie empire in this addictive idle game that never ends!</p>
+                        <a href="games/cookie-clicker.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 6: Wordle -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/wordle.jpg" alt="Wordle Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Wordle</h2>
+                        <p class="text-gray-300 mb-4">Test your vocabulary in this popular word-guessing game. New puzzle every day!</p>
+                        <a href="games/wordle.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 7: Tetris -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/tetris.jpg" alt="Tetris Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Tetris</h2>
+                        <p class="text-gray-300 mb-4">The classic block-stacking puzzle game that never gets old. How high can you score?</p>
+                        <a href="games/tetris.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 8: Minecraft Classic -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/minecraft-classic.jpg" alt="Minecraft Classic Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Minecraft Classic</h2>
+                        <p class="text-gray-300 mb-4">Build and explore in the original version of the world's most popular sandbox game.</p>
+                        <a href="games/minecraft-classic.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 9: Pacman -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/pacman.jpg" alt="Pacman Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Pacman</h2>
+                        <p class="text-gray-300 mb-4">Navigate through mazes, eat dots, and avoid ghosts in this timeless arcade classic.</p>
+                        <a href="games/pacman.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 10: Flappy Bird -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/flappy-bird.jpg" alt="Flappy Bird Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Flappy Bird</h2>
+                        <p class="text-gray-300 mb-4">Guide your bird through pipes in this challenging and addictive arcade game.</p>
+                        <a href="games/flappy-bird.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Game Card 11: Friday Night Funkin -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:transform hover:scale-105">
+                    <img src="images/friday-night-funkin.jpg" alt="Friday Night Funkin Game" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">Friday Night Funkin</h2>
+                        <p class="text-gray-300 mb-4">Battle in musical showdowns to impress your girlfriend in this rhythm-based game!</p>
+                        <a href="games/friday-night-funkin.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Play Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-400">Game Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="categories/action.html" class="bg-gray-800 p-4 rounded-lg text-center hover:bg-gray-700 transition duration-300">
+                    <span class="block text-xl font-bold text-yellow-400">Action</span>
+                    <span class="text-sm text-gray-400">12 Games</span>
+                </a>
+                <a href="categories/puzzle.html" class="bg-gray-800 p-4 rounded-lg text-center hover:bg-gray-700 transition duration-300">
+                    <span class="block text-xl font-bold text-yellow-400">Puzzle</span>
+                    <span class="text-sm text-gray-400">8 Games</span>
+                </a>
+                <!-- Add more categories... -->
+            </div>
+        </section>
+
+        <!-- Top Rated Games -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-400">Top Rated Games</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Add top rated game cards... -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Footer content... -->
+            </div>
+        </div>
+    </footer>
+    <footer>
+        <p>
+          <a href="about.html">About</a> |
+          <a href="privacy.html">Privacy Policy</a> |
+          <a href="contact.html">Contact</a>
+        </p>
+      </footer>
+      
+</body>
+</html> 

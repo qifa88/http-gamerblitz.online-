@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Pacman Online | Classic Arcade Game | GamerBlitz</title>
+    <meta name="description" content="Play the classic Pacman arcade game online at GamerBlitz! Navigate through mazes, eat dots, and avoid ghosts in this timeless gaming experience. No download needed!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/pacman">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <!-- ... Navigation content ... -->
+    </nav>
+
+    <!-- Game Title Section -->
+    <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                Pacman
+            </h1>
+            <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
+                The iconic maze chase that defined a gaming generation!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Game Frame -->
+        <div class="bg-gray-800 rounded-lg p-8 text-center">
+            <img src="../images/pacman.jpg" alt="Pacman游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
+            <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
+            <a href="https://www.google.com/logos/2010/pacman10-i.html" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                开始玩Pacman
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+        </div>
+
+        <!-- Game Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Game Description -->
+            <div class="md:col-span-2 space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Game Description</h2>
+                    <div class="prose prose-invert max-w-none">
+                        <p class="mb-4">Pacman is one of the most iconic arcade games ever created. Guide Pacman through the maze, eating dots while avoiding colorful ghosts. Power pellets temporarily turn the tables, allowing you to chase and eat the ghosts for bonus points.</p>
+                        <p class="mb-4">Released in 1980, Pacman revolutionized the gaming industry and remains one of the most recognizable video game characters to this day.</p>
+                    </div>
+                </div>
+
+                <!-- How to Play -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Use arrow keys to move Pacman through the maze</li>
+                        <li>Eat all the dots to complete each level</li>
+                        <li>Avoid the ghosts - they'll cost you a life if they catch you</li>
+                        <li>Eat power pellets to turn ghosts blue and vulnerable</li>
+                        <li>Eat fruit for bonus points when they appear</li>
+                    </ul>
+                </div>
+
+                <!-- Advanced Strategies -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Pro Tips & Strategies</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300">
+                        <li>Learn ghost behavior patterns - each ghost has unique movement</li>
+                        <li>Use tunnels to escape when cornered</li>
+                        <li>Time your power pellet consumption strategically</li>
+                        <li>Clear dots in organized patterns to maximize efficiency</li>
+                        <li>Keep track of ghost respawn timing after eating them</li>
+                    </ul>
+                </div>
+
+                <!-- Ghost Guide -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Know Your Ghosts</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-red-400 font-bold mb-2">Blinky (Red)</h3>
+                            <p class="text-gray-300">Aggressively chases Pacman directly</p>
+                        </div>
+                        <div>
+                            <h3 class="text-pink-400 font-bold mb-2">Pinky (Pink)</h3>
+                            <p class="text-gray-300">Tries to ambush by moving ahead of Pacman</p>
+                        </div>
+                        <div>
+                            <h3 class="text-cyan-400 font-bold mb-2">Inky (Cyan)</h3>
+                            <p class="text-gray-300">Uses complex patterns to trap Pacman</p>
+                        </div>
+                        <div>
+                            <h3 class="text-orange-400 font-bold mb-2">Clyde (Orange)</h3>
+                            <p class="text-gray-300">Moves randomly, unpredictable behavior</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Game Details -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Game Details</h3>
+                    <div class="grid grid-cols-2 gap-2 text-gray-300">
+                        <div class="font-semibold">Category:</div>
+                        <div>Arcade Classic</div>
+                        <div class="font-semibold">Platform:</div>
+                        <div>Browser</div>
+                        <div class="font-semibold">Controls:</div>
+                        <div>Arrow Keys</div>
+                        <div class="font-semibold">Release Year:</div>
+                        <div>1980</div>
+                        <div class="font-semibold">Developer:</div>
+                        <div>Namco</div>
+                    </div>
+                </div>
+
+                <!-- High Scores -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Today's Top Scores</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-300">PAC_MASTER</span>
+                            <span class="text-yellow-400">246,900</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-300">GhostHunter</span>
+                            <span class="text-yellow-400">198,740</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-300">DotEater99</span>
+                            <span class="text-yellow-400">167,520</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar Games -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Similar Games</h3>
+                    <div class="space-y-4">
+                        <a href="/games/slope" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Slope</div>
+                            <div class="text-sm text-gray-400">Action Arcade</div>
+                        </a>
+                        <a href="/games/tetris" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Tetris</div>
+                            <div class="text-sm text-gray-400">Classic Arcade</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <!-- ... Footer content ... -->
+    </footer>
+
+    <!-- Add necessary JavaScript -->
+    <script>
+    // Game error handling
+    function handleGameError() {
+        document.getElementById('loadingMessage').innerHTML = `
+            <div class="text-white text-center p-4">
+                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    Retry
+                </button>
+            </div>
+        `;
+    }
+    </script>
+</body>
+</html> 

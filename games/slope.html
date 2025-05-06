@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Slope Online | Fast-Paced 3D Runner | GamerBlitz</title>
+    <meta name="description" content="Play Slope online at GamerBlitz! Challenge yourself in this fast-paced 3D running game. Test your reflexes as you navigate through increasingly difficult terrain.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://gamerblitz.online/games/slope">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Play Slope Online | GamerBlitz">
+    <meta property="og:description" content="Challenge yourself in this fast-paced 3D running game. Test your reflexes!">
+    <meta property="og:url" content="https://gamerblitz.online/games/slope">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gamerblitz.online/images/slope.jpg">
+    <meta property="og:site_name" content="GamerBlitz">
+    
+    <style>
+        /* 强制iframe尺寸 */
+        #gameFrame {
+            width: 100% !important;
+            height: 700px !important;
+            min-height: 700px !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+                GamerBlitz<span class="text-yellow-400">.online</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+                <a href="../categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+                <a href="../top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+                <a href="../new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Game Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Game Title and Info -->
+            <div class="mb-8 text-center">
+                <h1 class="text-4xl font-extrabold mb-4 text-yellow-400">Slope</h1>
+                <img src="../images/slope.jpg" alt="Slope Game" class="w-full h-64 object-cover mb-4 rounded-lg">
+                <p class="text-lg text-gray-300 mb-6">Challenge yourself in this fast-paced 3D running game. Test your reflexes as you navigate through increasingly difficult terrain.</p>
+            </div>
+
+            <!-- Game Frame -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
+                <div id="loadingMessage" class="text-center p-4">
+                    <p class="text-xl">Loading Game...</p>
+                    <div class="mt-3 w-12 h-12 border-t-4 border-b-4 border-indigo-500 rounded-full animate-spin mx-auto"></div>
+                </div>
+                
+                <iframe id="gameFrame" 
+                        src="https://slope-game.github.io/" 
+                        style="width:100% !important; height:700px !important;" 
+                        class="w-full h-[700px] border-0 rounded-lg shadow-lg"
+                        allow="fullscreen; autoplay; clipboard-write"
+                        allowfullscreen
+                        loading="lazy">
+                </iframe>
+                
+                <script>
+                    // Hide loading message when game loads
+                    document.getElementById('gameFrame').onload = function() {
+                        document.getElementById('loadingMessage').style.display = 'none';
+                    };
+                    
+                    // Show error message if game fails to load
+                    document.getElementById('gameFrame').onerror = function() {
+                        document.getElementById('loadingMessage').innerHTML = `
+                            <div class="text-white text-center p-4">
+                                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                    Retry
+                                </button>
+                            </div>
+                        `;
+                    };
+                </script>
+            </div>
+
+            <!-- Game Controls Guide -->
+            <div class="mt-8 bg-gray-800 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li>Use the <strong>arrow keys</strong> or <strong>A/D keys</strong> to control your ball.</li>
+                    <li>Avoid obstacles and stay on the track.</li>
+                    <li>The game gradually gets faster as you progress.</li>
+                    <li>Try to beat your high score with each attempt!</li>
+                </ul>
+            </div>
+
+            <!-- Related Games -->
+            <div class="mt-12">
+                <h2 class="text-2xl font-bold mb-6 text-yellow-400">More Games You'll Love</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="flappy-bird.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/flappy-bird.jpg" alt="Flappy Bird" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Flappy Bird</h3>
+                    </a>
+                    <a href="retro-bowl.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/retro-bowl.jpg" alt="Retro Bowl" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Retro Bowl</h3>
+                    </a>
+                    <a href="2048.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/2048.jpg" alt="2048" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">2048</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>© 2023 GamerBlitz.online - Free Online Games</p>
+                <p class="mt-2 text-sm">All games are property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
