@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Tetris Online | Classic Block Puzzle Game | GamerBlitz</title>
-    <meta name="description" content="Play the classic Tetris game online at GamerBlitz! Stack blocks, clear lines, and challenge yourself in this timeless puzzle game. No download required!">
+    <title>Play Wordle Online | Daily Word Puzzle Game | GamerBlitz</title>
+    <meta name="description" content="Play Wordle online at GamerBlitz! Challenge yourself with a new word puzzle every day. Guess the hidden word in six tries or less. Free to play!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="canonical" href="https://gamerblitz.online/games/tetris">
+    <link rel="canonical" href="https://gamerblitz.online/games/wordle">
 </head>
 <body class="bg-gray-900 text-white">
     <!-- Navigation (Same as other pages) -->
@@ -18,10 +18,10 @@
     <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
         <div class="container mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
-                Tetris
+                Wordle
             </h1>
             <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
-                The classic block-stacking puzzle game that never gets old!
+                Test your vocabulary with a new word puzzle every day!
             </p>
         </div>
     </header>
@@ -30,17 +30,21 @@
     <main class="container mx-auto px-4 py-8">
         <!-- Game Frame -->
         <div class="bg-gray-800 rounded-lg p-8 text-center">
-            <img src="../images/tetris-preview.jpg" alt="Tetris游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
+            <img src="../images/wordle.jpg" alt="Wordle游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
             <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
             <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
-            <a href="https://tetris.com/play-tetris" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank" rel="noopener noreferrer" 
                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
-                开始玩Tetris
+                开始玩Wordle
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>
             </a>
             <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+        </div>
+        <!-- Ad Placeholder Below Launch Button -->
+        <div class="bg-gray-800 text-gray-400 text-center p-6 my-8 rounded-lg rounded-md shadow-md">
+        Advertisement space — your ad could be here!
         </div>
 
         <!-- Game Info Grid -->
@@ -50,8 +54,8 @@
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
                     <h2 class="text-2xl font-bold mb-4 text-yellow-400">Game Description</h2>
                     <div class="prose prose-invert max-w-none">
-                        <p class="mb-4">Tetris is the timeless puzzle game that has captivated players for generations. Arrange falling blocks (tetrominoes) to create complete lines and prevent the blocks from stacking to the top.</p>
-                        <p class="mb-4">With its simple yet addictive gameplay, Tetris continues to challenge players worldwide to improve their spatial awareness and quick decision-making skills.</p>
+                        <p class="mb-4">Wordle is a daily word puzzle that challenges players to guess a five-letter word in six attempts or less. After each guess, the game provides feedback using colors: green for correct letters in the right position, yellow for correct letters in the wrong position, and gray for letters not in the word.</p>
+                        <p class="mb-4">With a new puzzle available every day, Wordle has become a global phenomenon that brings together word enthusiasts and casual players alike in a shared daily challenge.</p>
                     </div>
                 </div>
 
@@ -59,23 +63,23 @@
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
                     <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
-                        <li>Use Left/Right arrows to move pieces horizontally</li>
-                        <li>Up arrow rotates the piece</li>
-                        <li>Down arrow speeds up the descent</li>
-                        <li>Space bar drops the piece instantly</li>
-                        <li>Complete lines to clear them and score points</li>
+                        <li>Type a five-letter word and press Enter</li>
+                        <li>Green squares indicate correct letters in the right spot</li>
+                        <li>Yellow squares show correct letters in the wrong position</li>
+                        <li>Gray squares mean those letters aren't in the word</li>
+                        <li>You have six attempts to guess the word</li>
                     </ul>
                 </div>
 
-                <!-- Tips and Tricks -->
+                <!-- Tips and Strategies -->
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Tips & Tricks</h2>
+                    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Winning Strategies</h2>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
-                        <li>Learn to recognize piece patterns</li>
-                        <li>Keep the stack as flat as possible</li>
-                        <li>Save long pieces for Tetris clears</li>
-                        <li>Practice T-spins for bonus points</li>
-                        <li>Plan ahead while current piece is falling</li>
+                        <li>Start with words containing common letters (E, A, R, T, S)</li>
+                        <li>Use your first guess to eliminate multiple vowels</li>
+                        <li>Pay attention to letter patterns and common word endings</li>
+                        <li>Don't repeat letters in your early guesses</li>
+                        <li>Keep track of eliminated letters</li>
                     </ul>
                 </div>
             </div>
@@ -87,13 +91,15 @@
                     <h3 class="text-xl font-bold mb-4 text-yellow-400">Game Details</h3>
                     <div class="grid grid-cols-2 gap-2 text-gray-300">
                         <div class="font-semibold">Category:</div>
-                        <div>Puzzle</div>
+                        <div>Word Puzzle</div>
                         <div class="font-semibold">Platform:</div>
                         <div>Browser</div>
                         <div class="font-semibold">Controls:</div>
                         <div>Keyboard</div>
                         <div class="font-semibold">Difficulty:</div>
-                        <div>Easy to Learn, Hard to Master</div>
+                        <div>Moderate</div>
+                        <div class="font-semibold">Daily Limit:</div>
+                        <div>One puzzle per day</div>
                     </div>
                 </div>
 
@@ -105,10 +111,19 @@
                             <div class="font-bold text-indigo-300">2048</div>
                             <div class="text-sm text-gray-400">Number Puzzle</div>
                         </a>
-                        <a href="/games/wordle" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
-                            <div class="font-bold text-indigo-300">Wordle</div>
-                            <div class="text-sm text-gray-400">Word Puzzle</div>
+                        <a href="/games/tetris" class="block hover:bg-gray-700 p-2 rounded transition duration-300">
+                            <div class="font-bold text-indigo-300">Tetris</div>
+                            <div class="text-sm text-gray-400">Block Puzzle</div>
                         </a>
+                    </div>
+                </div>
+
+                <!-- Daily Stats -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Today's Stats</h3>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-indigo-300 mb-2" id="playersToday">12,458</div>
+                        <div class="text-sm text-gray-400">Players Today</div>
                     </div>
                 </div>
             </div>
@@ -119,5 +134,21 @@
     <footer class="bg-indigo-900 text-gray-300 py-10 mt-12">
         <!-- ... Footer content ... -->
     </footer>
+
+    <!-- Add necessary JavaScript -->
+    <script>
+    // Game error handling
+    function handleGameError() {
+        document.getElementById('loadingMessage').innerHTML = `
+            <div class="text-white text-center p-4">
+                <p class="text-xl mb-4">😕 Unable to load the game</p>
+                <p class="mb-4">Please try refreshing the page or check your internet connection.</p>
+                <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    Retry
+                </button>
+            </div>
+        `;
+    }
+    </script>
 </body>
 </html> 

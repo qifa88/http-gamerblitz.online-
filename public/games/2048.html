@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Chess Online | Classic Strategy Game | GamerBlitz</title>
-    <meta name="description" content="Play Chess online at GamerBlitz! Challenge your mind with the ultimate strategy game. Play against AI or other players. Perfect your chess skills!">
+    <title>Play 2048 Online | Addictive Number Puzzle | GamerBlitz</title>
+    <meta name="description" content="Play 2048 online at GamerBlitz! Join the numbers and get to the 2048 tile! Are you ready for this addictive puzzle challenge?">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="canonical" href="https://gamerblitz.online/games/chess">
+    <link rel="canonical" href="https://gamerblitz.online/games/2048">
 
     <!-- Open Graph tags -->
-    <meta property="og:title" content="Play Chess Online | GamerBlitz">
-    <meta property="og:description" content="Challenge your mind with the ultimate strategy game. Play against AI or other players.">
-    <meta property="og:url" content="https://gamerblitz.online/games/chess">
+    <meta property="og:title" content="Play 2048 Online | GamerBlitz">
+    <meta property="og:description" content="Join the numbers and get to the 2048 tile! Are you ready for this addictive puzzle challenge?">
+    <meta property="og:url" content="https://gamerblitz.online/games/2048">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://gamerblitz.online/images/chess.jpg">
+    <meta property="og:image" content="https://gamerblitz.online/images/2048.jpg">
     <meta property="og:site_name" content="GamerBlitz">
     
     <style>
@@ -55,9 +55,9 @@
         <div class="max-w-6xl mx-auto">
             <!-- Game Title and Info -->
             <div class="mb-8 text-center">
-                <h1 class="text-4xl font-extrabold mb-4 text-yellow-400">Chess</h1>
-                <img src="../images/chess.jpg" alt="Chess Game" class="w-full h-64 object-cover mb-4 rounded-lg">
-                <p class="text-lg text-gray-300 mb-6">Challenge your mind with the ultimate strategy game. Play against AI or other players. Perfect your chess skills!</p>
+                <h1 class="text-4xl font-extrabold mb-4 text-yellow-400">2048</h1>
+                <img src="../images/2048.jpg" alt="2048 Game" class="w-full h-64 object-cover mb-4 rounded-lg">
+                <p class="text-lg text-gray-300 mb-6">Join the numbers and get to the 2048 tile! Are you ready for this addictive puzzle challenge?</p>
             </div>
 
             <!-- Game Frame -->
@@ -68,14 +68,22 @@
                 </div>
                 
                 <iframe id="gameFrame" 
-                        src="https://www.crazygames.com/embed/chess-master" 
+                        src="https://www.mathsisfun.com/games/2048.html" 
                         style="width:100% !important; height:700px !important;" 
                         class="w-full h-[700px] border-0 rounded-lg shadow-lg"
                         allow="fullscreen; autoplay; clipboard-write"
                         allowfullscreen
                         loading="lazy">
                 </iframe>
-                
+            </div>  <!-- 游戏 iframe 区块结束 -->
+            <!-- 插入广告位 -->
+            <div class="bg-gray-800 text-gray-400 text-center p-6 my-8 rounded-lg rounded-md shadow-md">
+              Advertisement space – your ad could be here!
+            </div>
+            <!-- 接下来是游戏说明区域 -->
+            <!-- Game Controls Guide -->
+            <div class="mt-8 bg-gray-800 p-6 rounded-lg">
+            
                 <script>
                     // Hide loading message when game loads
                     document.getElementById('gameFrame').onload = function() {
@@ -101,11 +109,10 @@
             <div class="mt-8 bg-gray-800 p-6 rounded-lg">
                 <h2 class="text-2xl font-bold mb-4 text-yellow-400">How to Play</h2>
                 <ul class="list-disc list-inside space-y-2 text-gray-300">
-                    <li>White moves first, then players alternate turns</li>
-                    <li>Each piece has its own unique way of moving</li>
-                    <li>Capture opponent's pieces by moving to their square</li>
-                    <li>Protect your king from checkmate to win</li>
-                    <li>Game ends in stalemate if king isn't in check but has no legal moves</li>
+                    <li>Use your <strong>arrow keys</strong> to move the tiles.</li>
+                    <li>When two tiles with the same number touch, they <strong>merge into one</strong>!</li>
+                    <li>Add them up to reach the <strong>2048 tile</strong>.</li>
+                    <li>Plan your moves carefully to keep the game going as long as possible.</li>
                 </ul>
             </div>
 
@@ -113,17 +120,17 @@
             <div class="mt-12">
                 <h2 class="text-2xl font-bold mb-6 text-yellow-400">More Games You'll Love</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <a href="2048.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
-                        <img src="../images/2048.jpg" alt="2048" class="w-full h-32 object-cover rounded-lg mb-2">
-                        <h3 class="text-lg font-bold text-indigo-300">2048</h3>
-                    </a>
-                    <a href="pacman.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
-                        <img src="../images/pacman.jpg" alt="Pacman" class="w-full h-32 object-cover rounded-lg mb-2">
-                        <h3 class="text-lg font-bold text-indigo-300">Pacman</h3>
+                    <a href="chess.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/chess.jpg" alt="Chess" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Chess</h3>
                     </a>
                     <a href="tetris.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
                         <img src="../images/tetris.jpg" alt="Tetris" class="w-full h-32 object-cover rounded-lg mb-2">
                         <h3 class="text-lg font-bold text-indigo-300">Tetris</h3>
+                    </a>
+                    <a href="slope.html" class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                        <img src="../images/slope.jpg" alt="Slope" class="w-full h-32 object-cover rounded-lg mb-2">
+                        <h3 class="text-lg font-bold text-indigo-300">Slope</h3>
                     </a>
                 </div>
             </div>
