@@ -22,9 +22,89 @@
     }
   </script>
   
-
   <link href="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link rel="canonical" href="https://gamerblitz.online">
+  <!-- ✅ 首页 index.html 插入以下结构化数据，放在 <head> 中 -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GamerBlitz",
+    "url": "https://gamerblitz.online/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://gamerblitz.online/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <!-- ✅ 分类页 categories.html 插入以下结构化数据，放在 <head> 中 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Game Categories",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://gamerblitz.online/games/chess.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://gamerblitz.online/games/cookie-clicker.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://gamerblitz.online/games/flappy-bird.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://gamerblitz.online/games/friday-night-funkin.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://gamerblitz.online/games/minecraft-classic.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://gamerblitz.online/games/pacman.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://gamerblitz.online/games/retro-bowl.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://gamerblitz.online/games/slope.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://gamerblitz.online/games/tetris.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://gamerblitz.online/games/2048.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "url": "https://gamerblitz.online/games/wordle.html"
+      }
+    ]
+  }
+  </script>
+  
 </head>
 <body class="bg-gray-900 text-white">
   <!-- Header & Navigation -->
