@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 首页 -->
   <url>
     <loc>https://gamerblitz.online/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- 分类页 -->
+  <url>
+    <loc>https://gamerblitz.online/categories/index.html</loc>
+  </url>
+
+  <!-- 游戏详情页（11个） -->
   <url><loc>https://gamerblitz.online/games/2048.html</loc></url>
   <url><loc>https://gamerblitz.online/games/chess.html</loc></url>
   <url><loc>https://gamerblitz.online/games/cookie-clicker.html</loc></url>
@@ -16,4 +25,14 @@
   <url><loc>https://gamerblitz.online/games/slope.html</loc></url>
   <url><loc>https://gamerblitz.online/games/tetris.html</loc></url>
   <url><loc>https://gamerblitz.online/games/wordle.html</loc></url>
+
+  <!-- 榜单页 -->
+  <url><loc>https://gamerblitz.online/top-games.html</loc></url>
+  <url><loc>https://gamerblitz.online/new-games.html</loc></url>
+
+  <!-- 信息页 -->
+  <url><loc>https://gamerblitz.online/about.html</loc></url>
+  <url><loc>https://gamerblitz.online/contact.html</loc></url>
+  <url><loc>https://gamerblitz.online/privacy.html</loc></url>
+
 </urlset>
