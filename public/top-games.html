@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top Games - GamerBlitz</title>
-  <meta name="description" content="Discover the top-rated browser games on GamerBlitz. Play hits like Chess, Tetris, and 2048 directly in your browser for free!" />
+  <meta name="description" content="Check out the most popular browser games on GamerBlitz! Discover classics like Chess, Tetris, and 2048 and play for free.">
   <link rel="canonical" href="https://gamerblitz.online/top-games.html" />
-  
-  <!-- ✅ JSON-LD Structured Data 插入位置：第 8 行 -->
+  <link href="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+
+  <!-- ✅ 结构化数据插入位置：第 9 行 -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,19 +44,117 @@
   }
   </script>
 </head>
-<body>
-  <h1>Top Games</h1>
-  <ul>
-    <li><a href="/games/chess.html">Chess</a></li>
-    <li><a href="/games/tetris.html">Tetris</a></li>
-    <li><a href="/games/2048.html">2048</a></li>
-    <li><a href="/games/retro-bowl.html">Retro Bowl</a></li>
-    <li><a href="/games/slope.html">Slope</a></li>
-  </ul>
+<body class="bg-gray-900 text-white">
 
-  <!-- ✅ 广告位占位 -->
-  <div style="width:100%; height:90px; background-color:#eee; text-align:center; line-height:90px;">
-    [Top Page Ad Placeholder]
-  </div>
+  <!-- ✅ 页首导航栏（与首页一致） -->
+  <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex flex-wrap justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+        GamerBlitz<span class="text-yellow-400">.online</span>
+      </a>
+      <div class="order-3 mt-4 w-full md:w-auto md:order-2 md:mt-0">
+        <div class="relative">
+          <input type="search" placeholder="Search games..." class="w-full md:w-64 px-4 py-2 bg-gray-800 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+      </div>
+      <div class="hidden md:flex space-x-6 order-2 md:order-3">
+        <a href="index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+        <a href="categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+        <a href="top-games.html" class="hover:text-yellow-300 transition duration-300 font-bold underline">Top Games</a>
+        <a href="new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ 主内容区域 -->
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-extrabold text-yellow-400 mb-6">Top Games</h1>
+
+    <!-- 游戏榜单卡片列表 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Chess -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <img src="images/chess.jpg" alt="Chess" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-bold text-yellow-300 mb-2">Chess</h2>
+        <p class="text-gray-400 mb-4">Classic strategy game. Play against AI or other players online.</p>
+        <a href="games/chess.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Play Now</a>
+      </div>
+
+      <!-- Tetris -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <img src="images/tetris.jpg" alt="Tetris" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-bold text-yellow-300 mb-2">Tetris</h2>
+        <p class="text-gray-400 mb-4">Stack the blocks and clear lines. How high can you score?</p>
+        <a href="games/tetris.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Play Now</a>
+      </div>
+
+      <!-- 2048 -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <img src="images/2048.jpg" alt="2048" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-bold text-yellow-300 mb-2">2048</h2>
+        <p class="text-gray-400 mb-4">Join numbers to get 2048. A mind-bending puzzle game.</p>
+        <a href="games/2048.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Play Now</a>
+      </div>
+
+      <!-- Retro Bowl -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <img src="images/retro-bowl.jpg" alt="Retro Bowl" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-bold text-yellow-300 mb-2">Retro Bowl</h2>
+        <p class="text-gray-400 mb-4">Retro-style football management game with pixel glory.</p>
+        <a href="games/retro-bowl.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Play Now</a>
+      </div>
+
+      <!-- Slope -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition">
+        <img src="images/slope.jpg" alt="Slope" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-bold text-yellow-300 mb-2">Slope</h2>
+        <p class="text-gray-400 mb-4">3D running game. Navigate steep slopes with speed and reflex.</p>
+        <a href="games/slope.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Play Now</a>
+      </div>
+    </div>
+
+    <!-- 广告位占位 -->
+    <div class="w-full h-24 mt-12 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300">
+      [Top Page Ad Placeholder]
+    </div>
+  </main>
+
+  <!-- ✅ 页脚结构（与首页一致） -->
+  <footer class="bg-indigo-900 text-gray-300 py-10 mt-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">GamerBlitz</h3>
+          <p class="text-sm text-gray-400">Play the best browser games anytime, anywhere. No installs, just fun!</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Categories</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="categories/action.html" class="hover:text-white">Action</a></li>
+            <li><a href="categories/puzzle.html" class="hover:text-white">Puzzle</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Follow Us</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="#" class="hover:text-white">Twitter</a></li>
+            <li><a href="#" class="hover:text-white">Discord</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Legal</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-sm text-gray-400">
+        © 2025 GamerBlitz.online — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
