@@ -6,14 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GamerBlitz - Your Ultimate Online Gaming Destination | Free Browser Games</title>
   <meta name="description" content="Play the best free online games at GamerBlitz. Experience thrilling browser games including Slope, 2048, Retro Bowl, and more. No downloads required!">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8DHJNFJ179"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8DHJNFJ179');
-</script>
+  <script>
+    const isCN = navigator.language.startsWith("zh") || navigator.languages?.[0]?.startsWith("zh");
+    if (!isCN) {
+      // 动态插入 GA 脚本（仅非中文用户）
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-8DHJNFJ179";
+      document.head.appendChild(script);
+  
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8DHJNFJ179');
+    }
+  </script>
+  
 
   <link href="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link rel="canonical" href="https://gamerblitz.online">
