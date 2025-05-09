@@ -112,7 +112,7 @@
         <div class="p-6">
           <h3 class="text-xl font-bold text-yellow-400 mb-2">Chess</h3>
           <p class="text-gray-300 mb-4">Challenge your mind with the ultimate strategy game. Play against AI or other players.</p>
-          <a href="games/chess.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Chess' });">
+          <a href="games/chess.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="console.log('GA event: Chess clicked'); gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Chess' }); setTimeout(() => { window.location.href = 'games/chess.html'; }, 200); return false;">
             Play Now</a>
           
           <script type="application/ld+json">
