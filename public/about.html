@@ -3,12 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About GamerBlitz</title>
+  <title>About GamerBlitz | Free Online Browser Games Platform</title>
+  <meta name="description" content="Learn more about GamerBlitz - your destination for free browser games. Play instantly with no downloads required. Discover our mission and values.">
+  <link href="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="canonical" href="https://gamerblitz.online/about.html">
+  
+  <!-- 语言检测脚本 -->
+  <script>
+    // 检测用户语言
+    const userLang = navigator.language || navigator.userLanguage || 'en';
+    const isDE = userLang.startsWith('de');
+    const isRU = userLang.startsWith('ru');
+    
+    // 设置网页语言
+    document.documentElement.lang = isDE ? 'de' : (isRU ? 'ru' : 'en');
+    
+    // 根据用户语言优化元数据
+    document.addEventListener('DOMContentLoaded', function() {
+      if(isDE) {
+        document.title = 'Über GamerBlitz | Kostenlose Online-Browser-Spieleplattform';
+        document.querySelector('meta[name="description"]').content = 
+          'Erfahren Sie mehr über GamerBlitz - Ihr Ziel für kostenlose Browser-Spiele. Sofort spielbar ohne Downloads. Entdecken Sie unsere Mission und Werte.';
+        
+        // 更新页面内容
+        document.querySelector('h1').innerHTML = 'Über GamerBlitz';
+        document.querySelectorAll('.content-section p').forEach(function(p, index) {
+          if(index === 0) {
+            p.innerHTML = 'GamerBlitz.online ist eine kostenlose Online-Spieleplattform, auf der Benutzer unterhaltsame und süchtig machende Browser-Spiele ohne Downloads und ohne Werbeunterbrechungen spielen können. Unsere Mission ist es, hochwertige Spiele anzubieten, die schnell, leicht und sofort auf jedem Gerät spielbar sind.';
+          } else if(index === 1) {
+            p.innerHTML = 'Wir konzentrieren uns auf die Kuratierung beliebter Titel wie 2048, Slope, Schach und viele mehr, um Ihnen ein reibungsloses Spielerlebnis während Ihrer Pausen oder Freizeit zu bieten. Ob Sie ein Gelegenheitsspieler sind oder nur ein paar Minuten vertreiben möchten, GamerBlitz ist der richtige Ort für Sie!';
+          }
+        });
+        
+        document.querySelector('.mission-title').innerHTML = 'Unsere Mission';
+        document.querySelector('.team-title').innerHTML = 'Unser Team';
+        document.querySelector('.values-title').innerHTML = 'Unsere Werte';
+        
+      } else if(isRU) {
+        document.title = 'О GamerBlitz | Платформа бесплатных онлайн-браузерных игр';
+        document.querySelector('meta[name="description"]').content = 
+          'Узнайте больше о GamerBlitz - вашем источнике бесплатных браузерных игр. Играйте мгновенно без загрузок. Откройте для себя нашу миссию и ценности.';
+        
+        // 更新页面内容
+        document.querySelector('h1').innerHTML = 'О GamerBlitz';
+        document.querySelectorAll('.content-section p').forEach(function(p, index) {
+          if(index === 0) {
+            p.innerHTML = 'GamerBlitz.online - это бесплатная онлайн-игровая платформа, где пользователи могут играть в увлекательные браузерные игры без загрузок и без рекламных перерывов. Наша миссия - предоставлять высококачественные игры, которые быстро загружаются и мгновенно запускаются на любом устройстве.';
+          } else if(index === 1) {
+            p.innerHTML = 'Мы фокусируемся на подборе популярных игр, таких как 2048, Slope, Chess и многих других, чтобы обеспечить вам комфортный игровой процесс во время перерывов или досуга. Независимо от того, являетесь ли вы казуальным игроком или просто хотите скоротать несколько минут, GamerBlitz - это место для вас!';
+          }
+        });
+        
+        document.querySelector('.mission-title').innerHTML = 'Наша миссия';
+        document.querySelector('.team-title').innerHTML = 'Наша команда';
+        document.querySelector('.values-title').innerHTML = 'Наши ценности';
+      }
+    });
+    
+    // GA 脚本
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8DHJNFJ179');
+  </script>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DHJNFJ179"></script>
+  
+  <!-- Google AdSense 代码 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5724235377875645" crossorigin="anonymous"></script>
 </head>
-<body>
-  <h1>About GamerBlitz</h1>
-  <p>GamerBlitz.online is a free online gaming platform where users can play fun and addictive browser games with no downloads and no ads interruptions. Our mission is to deliver high-quality games that are fast, lightweight, and instantly playable on any device.</p>
+<body class="bg-gray-900 text-white">
+  <!-- Navigation -->
+  <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex flex-wrap justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="images/logo.png" alt="GamerBlitz Logo" class="h-8 w-8 rounded" />
+        <span class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+          GamerBlitz<span class="text-yellow-400">.online</span>
+        </span>
+      </a>
+      
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+        <a href="../categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+        <a href="top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+        <a href="new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+      </div>
+    </div>
+  </nav>
 
-  <p>We focus on curating popular titles like 2048, Slope, Chess, and many more to provide you with a smooth gaming experience during your breaks or leisure time. Whether you're a casual gamer or just looking to kill a few minutes, GamerBlitz is the place for you!</p>
+  <!-- Header Section -->
+  <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+        About GamerBlitz
+      </h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+    <!-- AdSense 广告占位符 -->
+    <div class="mb-8">
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5724235377875645"
+          data-ad-slot="7259870977"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    
+    <!-- About Content -->
+    <div class="bg-gray-800 rounded-lg p-8 mb-8 content-section">
+      <p class="text-lg mb-6">
+        GamerBlitz.online is a free online gaming platform where users can play fun and addictive browser games with no downloads and no ads interruptions. Our mission is to deliver high-quality games that are fast, lightweight, and instantly playable on any device.
+      </p>
+      
+      <p class="text-lg mb-6">
+        We focus on curating popular titles like 2048, Slope, Chess, and many more to provide you with a smooth gaming experience during your breaks or leisure time. Whether you're a casual gamer or just looking to kill a few minutes, GamerBlitz is the place for you!
+      </p>
+    </div>
+    
+    <!-- Additional About Sections -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-gray-800 rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4 text-yellow-400 mission-title">Our Mission</h2>
+        <p class="text-gray-300">
+          To create an accessible gaming platform that brings joy and entertainment to players worldwide, without the barriers of downloads, installations, or costly subscriptions.
+        </p>
+      </div>
+      
+      <div class="bg-gray-800 rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4 text-yellow-400 team-title">Our Team</h2>
+        <p class="text-gray-300">
+          GamerBlitz is built by a dedicated team of gaming enthusiasts and web developers who are passionate about creating the best possible online gaming experience.
+        </p>
+      </div>
+      
+      <div class="bg-gray-800 rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4 text-yellow-400 values-title">Our Values</h2>
+        <ul class="text-gray-300 list-disc list-inside">
+          <li>Accessibility for all gamers</li>
+          <li>Quality gameplay experience</li>
+          <li>Respect for user privacy</li>
+          <li>Continuous improvement</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- AdSense 广告占位符 (底部) -->
+    <div class="my-8">
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5724235377875645"
+          data-ad-slot="5946137344"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-gray-300 py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">GamerBlitz</h3>
+          <p class="text-sm text-gray-400">Play the best browser games anytime, anywhere. No installs, just fun!</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Categories</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="categories/action.html" class="hover:text-white">Action</a></li>
+            <li><a href="categories/puzzle.html" class="hover:text-white">Puzzle</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Follow Us</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="#" class="hover:text-white">Twitter</a></li>
+            <li><a href="#" class="hover:text-white">Discord</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Legal</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-sm text-gray-400">
+        © 2025 GamerBlitz.online — All rights reserved.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

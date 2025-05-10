@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +21,106 @@
 
   <script>
     const isCN = navigator.language.startsWith("zh") || navigator.languages?.[0]?.startsWith("zh");
+    
+    // 检测用户语言，特别关注德语用户
+    const userLang = navigator.language || navigator.userLanguage || 'en';
+    const isDE = userLang.startsWith('de');
+    const isRU = userLang.startsWith('ru');
+    
+    // 根据用户语言设置HTML标签的语言属性
+    document.documentElement.lang = isDE ? 'de' : (isRU ? 'ru' : 'en');
+    
+    // 根据用户语言优化元数据
+    if(isDE) {
+      // 德语用户元数据优化
+      document.querySelector('meta[name="description"]').content = 
+        'Spielen Sie die besten kostenlosen Online-Spiele bei GamerBlitz. Erleben Sie spannende Browser-Spiele wie Minecraft Classic, Retro Bowl und mehr. Keine Downloads erforderlich!';
+      document.querySelector('meta[property="og:description"]').content = 
+        'Entdecken Sie Minecraft Classic, 2048, Retro Bowl und mehr. Schnelles, kostenloses Online-Gaming ohne Downloads!';
+      document.querySelector('meta[name="twitter:description"]').content = 
+        'Entdecken Sie Minecraft Classic, 2048, Retro Bowl und mehr. Schnelles, kostenloses Online-Gaming ohne Downloads!';
+    } else if(isRU) {
+      // 俄语用户元数据优化
+      document.querySelector('meta[name="description"]').content = 
+        'Играйте в лучшие бесплатные онлайн-игры на GamerBlitz. Попробуйте захватывающие браузерные игры, включая Minecraft Classic, Retro Bowl и другие. Без загрузок!';
+      document.querySelector('meta[property="og:description"]').content = 
+        'Откройте для себя Minecraft Classic, 2048, Retro Bowl и другие. Быстрые, бесплатные онлайн-игры без загрузок!';
+      document.querySelector('meta[name="twitter:description"]').content = 
+        'Откройте для себя Minecraft Classic, 2048, Retro Bowl и другие. Быстрые, бесплатные онлайн-игры без загрузок!';
+    }
+    
+    // 等待DOM加载完成
+    document.addEventListener('DOMContentLoaded', function() {
+      // 显示对应语言的内容
+      const showLocalizedContent = function() {
+        // 隐藏所有语言内容
+        document.querySelectorAll('.en, .de, .ru').forEach(el => {
+          el.style.display = 'none';
+        });
+        
+        // 显示当前语言内容
+        let langClass = isDE ? '.de' : (isRU ? '.ru' : '.en');
+        document.querySelectorAll(langClass).forEach(el => {
+          el.style.display = 'inline';
+        });
+        
+        // 更新导航菜单
+        if (isDE) {
+          document.querySelectorAll('nav a').forEach(link => {
+            if (link.textContent === 'Home') link.textContent = 'Startseite';
+            if (link.textContent === 'Categories') link.textContent = 'Kategorien';
+            if (link.textContent === 'Top Games') link.textContent = 'Top Spiele';
+            if (link.textContent === 'New Games') link.textContent = 'Neue Spiele';
+          });
+          
+          // 更新标题
+          const heroTitle = document.querySelector('header h1');
+          if (heroTitle) {
+            heroTitle.innerHTML = 'GamerBlitz: Tauchen Sie ein in die neuesten und spannendsten Spiele für ein schnelles, wettbewerbsfähiges Erlebnis!';
+          }
+          
+          const heroDescription = document.querySelector('header p');
+          if (heroDescription) {
+            heroDescription.innerHTML = 'Erleben Sie den Nervenkitzel des Sofort-Spielens - keine Downloads erforderlich. Steigen Sie direkt in die Action ein mit unserer kuratierten Sammlung von Browser-Spielen!';
+          }
+          
+          // 更新章节标题
+          document.querySelectorAll('h2').forEach(heading => {
+            if (heading.textContent === 'Featured Games') heading.textContent = 'Ausgewählte Spiele';
+            if (heading.textContent === 'Game Categories') heading.textContent = 'Spielkategorien';
+          });
+          
+        } else if (isRU) {
+          document.querySelectorAll('nav a').forEach(link => {
+            if (link.textContent === 'Home') link.textContent = 'Главная';
+            if (link.textContent === 'Categories') link.textContent = 'Категории';
+            if (link.textContent === 'Top Games') link.textContent = 'Лучшие игры';
+            if (link.textContent === 'New Games') link.textContent = 'Новые игры';
+          });
+          
+          // 更新标题
+          const heroTitle = document.querySelector('header h1');
+          if (heroTitle) {
+            heroTitle.innerHTML = 'GamerBlitz: Погрузитесь в новейшие и захватывающие игры для динамичного, соревновательного игрового процесса!';
+          }
+          
+          const heroDescription = document.querySelector('header p');
+          if (heroDescription) {
+            heroDescription.innerHTML = 'Испытайте азарт мгновенной игры - без загрузок. Сразу погрузитесь в действие с нашей коллекцией браузерных игр!';
+          }
+          
+          // 更新章节标题
+          document.querySelectorAll('h2').forEach(heading => {
+            if (heading.textContent === 'Featured Games') heading.textContent = 'Рекомендуемые игры';
+            if (heading.textContent === 'Game Categories') heading.textContent = 'Категории игр';
+          });
+        }
+      };
+      
+      // 执行本地化
+      showLocalizedContent();
+    });
+    
     if (!isCN) {
       // 动态插入 GA 脚本（仅非中文用户）
       const script = document.createElement('script');
@@ -35,6 +134,9 @@
       gtag('config', 'G-8DHJNFJ179');
     }
   </script>
+  
+  <!-- Google AdSense 代码 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5724235377875645" crossorigin="anonymous"></script>
   
   <link href="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link rel="canonical" href="https://gamerblitz.online">
@@ -78,7 +180,7 @@
       </div>
       <div class="hidden md:flex space-x-6 order-2 md:order-3">
         <a href="index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
-        <a href="categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+        <a href="../categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
         <a href="top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
         <a href="new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
       </div>
@@ -104,16 +206,73 @@
         <!-- Featured Games -->
 <section class="mb-12">
     <h2 class="text-3xl font-bold mb-6 text-yellow-400">Featured Games</h2>
+    
+    <!-- AdSense 广告占位符 -->
+    <div class="mb-8">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5724235377875645"
+           data-ad-slot="7259870977"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
   
-      <!-- Game Card -->
+      <!-- Minecraft Classic (热门游戏1) -->
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+        <img src="images/minecraft-classic.jpg" alt="Minecraft Classic" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-yellow-400 mb-2">Minecraft Classic</h3>
+          <p class="text-gray-300 mb-4 game-description">
+            <span class="en">Build and explore in the original version of the world's most popular sandbox game.</span>
+            <span class="de" style="display:none">Bauen und erkunden Sie in der Originalversion des beliebtesten Sandbox-Spiels der Welt.</span>
+            <span class="ru" style="display:none">Стройте и исследуйте в оригинальной версии самой популярной в мире "песочницы".</span>
+          </p>
+          <a href="games/minecraft-classic.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="console.log('GA event: Minecraft Classic clicked'); gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Minecraft Classic' }); setTimeout(() => { window.location.href = 'games/minecraft-classic.html'; }, 200); return false;">
+            <span class="en">Play Now</span>
+            <span class="de" style="display:none">Jetzt Spielen</span>
+            <span class="ru" style="display:none">Играть</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Retro Bowl (热门游戏2) -->
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+        <img src="images/retro-bowl.jpg" alt="Retro Bowl" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-yellow-400 mb-2">Retro Bowl</h3>
+          <p class="text-gray-300 mb-4 game-description">
+            <span class="en">Experience the glory of pixel-perfect football in this retro-styled sports management game.</span>
+            <span class="de" style="display:none">Erleben Sie den Ruhm des pixelperfekten Footballs in diesem Retro-Sportmanagement-Spiel.</span>
+            <span class="ru" style="display:none">Испытайте славу пиксельного футбола в этой ретро-игре по управлению спортом.</span>
+          </p>
+          <a href="games/retro-bowl.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="console.log('GA event: Retro Bowl clicked'); gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Retro Bowl' }); setTimeout(() => { window.location.href = 'games/retro-bowl.html'; }, 200); return false;">
+            <span class="en">Play Now</span>
+            <span class="de" style="display:none">Jetzt Spielen</span>
+            <span class="ru" style="display:none">Играть</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Game Card (Chess) -->
       <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
         <img src="images/chess.jpg" alt="Chess" class="w-full h-48 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-bold text-yellow-400 mb-2">Chess</h3>
-          <p class="text-gray-300 mb-4">Challenge your mind with the ultimate strategy game. Play against AI or other players.</p>
+          <p class="text-gray-300 mb-4 game-description">
+            <span class="en">Challenge your mind with the ultimate strategy game. Play against AI or other players.</span>
+            <span class="de" style="display:none">Fordern Sie Ihren Geist mit dem ultimativen Strategiespiel heraus. Spielen Sie gegen KI oder andere Spieler.</span>
+            <span class="ru" style="display:none">Испытайте свой ум в этой классической стратегической игре. Играйте против ИИ или других игроков.</span>
+          </p>
           <a href="games/chess.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="console.log('GA event: Chess clicked'); gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Chess' }); setTimeout(() => { window.location.href = 'games/chess.html'; }, 200); return false;">
-            Play Now</a>
+            <span class="en">Play Now</span>
+            <span class="de" style="display:none">Jetzt Spielen</span>
+            <span class="ru" style="display:none">Играть</span>
+          </a>
           
           <script type="application/ld+json">
             {
@@ -124,52 +283,52 @@
                 {
                   "@type": "ListItem",
                   "position": 1,
-                  "url": "https://gamerblitz.online/games/chess.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "url": "https://gamerblitz.online/games/cookie-clicker.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "url": "https://gamerblitz.online/games/flappy-bird.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 4,
-                  "url": "https://gamerblitz.online/games/friday-night-funkin.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 5,
                   "url": "https://gamerblitz.online/games/minecraft-classic.html"
                 },
                 {
                   "@type": "ListItem",
-                  "position": 6,
-                  "url": "https://gamerblitz.online/games/pacman.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 7,
+                  "position": 2,
                   "url": "https://gamerblitz.online/games/retro-bowl.html"
                 },
                 {
                   "@type": "ListItem",
-                  "position": 8,
+                  "position": 3,
+                  "url": "https://gamerblitz.online/games/chess.html"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "url": "https://gamerblitz.online/games/cookie-clicker.html"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "url": "https://gamerblitz.online/games/2048.html"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
                   "url": "https://gamerblitz.online/games/slope.html"
                 },
                 {
                   "@type": "ListItem",
-                  "position": 9,
+                  "position": 7,
                   "url": "https://gamerblitz.online/games/tetris.html"
                 },
                 {
                   "@type": "ListItem",
+                  "position": 8,
+                  "url": "https://gamerblitz.online/games/pacman.html"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 9,
+                  "url": "https://gamerblitz.online/games/flappy-bird.html"
+                },
+                {
+                  "@type": "ListItem",
                   "position": 10,
-                  "url": "https://gamerblitz.online/games/wordle.html"
+                  "url": "https://gamerblitz.online/games/friday-night-funkin.html"
                 }
               ]
             }
@@ -194,16 +353,6 @@
           <h3 class="text-xl font-bold text-yellow-400 mb-2">Slope</h3>
           <p class="text-gray-300 mb-4">Challenge yourself in this fast-paced 3D running game. Test your reflexes as you navigate through increasingly difficult terrain.</p>
           <a href="games/slope.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Slope' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/retro-bowl.jpg" alt="Retro Bowl" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Retro Bowl</h3>
-          <p class="text-gray-300 mb-4">Experience the glory of pixel-perfect football in this retro-styled sports management game.</p>
-          <a href="games/retro-bowl.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Retro Bowl' });"
           >Play Now</a>
         </div>
       </div>
@@ -234,16 +383,6 @@
           <h3 class="text-xl font-bold text-yellow-400 mb-2">Tetris</h3>
           <p class="text-gray-300 mb-4">The classic block-stacking puzzle game that never gets old. How high can you score?</p>
           <a href="games/tetris.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Tetris' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/minecraft-classic.jpg" alt="Minecraft Classic" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Minecraft Classic</h3>
-          <p class="text-gray-300 mb-4">Build and explore in the original version of the world's most popular sandbox game.</p>
-          <a href="games/minecraft-classic.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Minecraft Classic' });"
           >Play Now</a>
         </div>
       </div>
@@ -281,6 +420,21 @@
     </div>
   </section>
   
+  <!-- AdSense 广告占位符 (分类前) -->
+  <div class="container mx-auto px-4 mb-12">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5724235377875645"
+         data-ad-slot="5946137344"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  
+  <!-- Categories Section -->
+  <section class="mb-12">
       <h2 class="text-3xl font-bold mb-6 text-yellow-400">Game Categories</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <a href="categories/action.html" class="bg-gray-800 p-4 rounded-lg text-center hover:bg-gray-700 transition duration-300">

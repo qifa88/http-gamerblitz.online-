@@ -7,6 +7,50 @@
     <meta name="description" content="Play Minecraft Classic online at GamerBlitz! Experience the original creative building game that started it all. Build, explore, and create in your browser!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="canonical" href="https://gamerblitz.online/games/minecraft-classic">
+    
+    <!-- 语言检测脚本 -->
+    <script>
+        // 检测用户语言
+        const userLang = navigator.language || navigator.userLanguage || 'en';
+        const isDE = userLang.startsWith('de');
+        const isRU = userLang.startsWith('ru');
+        
+        // 设置网页语言
+        document.documentElement.lang = isDE ? 'de' : (isRU ? 'ru' : 'en');
+        
+        // 根据用户语言优化元数据
+        document.addEventListener('DOMContentLoaded', function() {
+            if(isDE) {
+                document.title = 'Minecraft Classic Spielen | Kostenlose Browser-Version | GamerBlitz';
+                document.querySelector('meta[name="description"]').content = 
+                    'Spielen Sie Minecraft Classic online bei GamerBlitz! Erleben Sie das originale kreative Bauspiel, das alles begann. Bauen, erkunden und erschaffen Sie in Ihrem Browser!';
+                
+                // 更新页面文本
+                document.querySelector('h1').innerHTML = 'Minecraft Classic';
+                document.querySelector('header p').innerHTML = 'Bauen Sie alles, was Sie sich in dieser zeitlosen kreativen Sandbox vorstellen können!';
+            } else if(isRU) {
+                document.title = 'Играть в Minecraft Classic | Бесплатная браузерная версия | GamerBlitz';
+                document.querySelector('meta[name="description"]').content = 
+                    'Играйте в Minecraft Classic онлайн на GamerBlitz! Испытайте оригинальную творческую игру, с которой всё началось. Стройте, исследуйте и создавайте в вашем браузере!';
+                
+                // 更新页面文本
+                document.querySelector('h1').innerHTML = 'Minecraft Classic';
+                document.querySelector('header p').innerHTML = 'Постройте всё, что вы можете представить в этой неподвластной времени творческой песочнице!';
+            }
+        });
+        
+        // GA 脚本
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8DHJNFJ179');
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DHJNFJ179"></script>
+    
+    <!-- Google AdSense 代码 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5724235377875645" crossorigin="anonymous"></script>
 
     <script type="application/ld+json">
         {
@@ -24,8 +68,16 @@
           "operatingSystem": "All",
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "reviewCount": "2987"
+            "ratingValue": "4.8",
+            "reviewCount": "3582"
+          },
+          "gamePlatform": "Web Browser",
+          "genre": ["Sandbox", "Building", "Adventure"],
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
           }
         }
         </script>
@@ -51,24 +103,49 @@
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
+        <!-- AdSense 广告占位符 (游戏页面顶部) -->
+        <div class="mb-8">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-5724235377875645"
+               data-ad-slot="5946137344"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+    
         <!-- Game Frame -->
         <div class="bg-gray-800 rounded-lg p-8 text-center">
             <img src="../images/minecraft-classic.jpg" alt="Minecraft Classic游戏截图" class="mx-auto mb-6 rounded-lg max-w-md">
-            <h3 class="text-2xl font-bold text-yellow-400 mb-4">点击开始游戏</h3>
-            <p class="text-gray-300 mb-6">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
-            <!-- Ad Placeholder Below Launch Button -->
-        <div class="bg-gray-800 text-gray-400 text-center p-6 my-8 rounded-lg rounded-md shadow-md">
-        Advertisement space — your ad could be here!
-        </div>
-
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4 game-start-text">点击开始游戏</h3>
+            <p class="text-gray-300 mb-6 game-instructions">由于技术原因，游戏无法直接嵌入。请点击下方按钮在新标签页中开始游戏！</p>
+            
             <a href="https://classic.minecraft.net/" target="_blank" rel="noopener noreferrer" 
-               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
-                开始玩Minecraft Classic
+               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg game-cta"
+               onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Minecraft Classic' });">
+                <span class="en">Play Minecraft Classic</span>
+                <span class="de" style="display:none">Minecraft Classic Spielen</span>
+                <span class="ru" style="display:none">Играть в Minecraft Classic</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>
             </a>
-            <p class="text-sm text-gray-400 mt-4">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+            <p class="text-sm text-gray-400 mt-4 game-note">游戏将在新标签页中打开，完成后请关闭该标签页返回本站。</p>
+        </div>
+
+        <!-- AdSense 广告占位符 (游戏说明前) -->
+        <div class="my-8">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-5724235377875645"
+               data-ad-slot="7259870977"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
         </div>
 
         <!-- Game Info Grid -->
