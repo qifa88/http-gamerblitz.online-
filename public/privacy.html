@@ -3,29 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy</title>
+  <title>Privacy Policy | GamerBlitz Online Gaming Platform</title>
+  <meta name="description" content="GamerBlitz privacy policy: Learn how we protect your data and information while you enjoy our free online browser games.">
+  <link href="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="canonical" href="https://gamerblitz.online/privacy.html">
+  
+  <!-- 语言检测脚本 -->
+  <script>
+    // 检测用户语言
+    const userLang = navigator.language || navigator.userLanguage || 'en';
+    const isDE = userLang.startsWith('de');
+    const isRU = userLang.startsWith('ru');
+    
+    // 设置网页语言
+    document.documentElement.lang = isDE ? 'de' : (isRU ? 'ru' : 'en');
+    
+    // 根据用户语言优化元数据
+    document.addEventListener('DOMContentLoaded', function() {
+      if(isDE) {
+        document.title = 'Datenschutzrichtlinie | GamerBlitz Online-Spieleplattform';
+        document.querySelector('meta[name="description"]').content = 
+          'GamerBlitz Datenschutzrichtlinie: Erfahren Sie, wie wir Ihre Daten und Informationen schützen, während Sie unsere kostenlosen Online-Browser-Spiele genießen.';
+        
+        // 更新页面内容
+        document.querySelector('h1').innerHTML = 'Datenschutzrichtlinie';
+        document.querySelector('.update-date').innerHTML = 'Zuletzt aktualisiert: 6. Mai 2025';
+        document.querySelector('.intro-text').innerHTML = 'Bei GamerBlitz.online schätzen wir Ihre Privatsphäre. Diese Datenschutzrichtlinie beschreibt die Arten von personenbezogenen Daten, die wir sammeln, und wie wir sie verwenden.';
+        
+        const sectionTitles = document.querySelectorAll('.section-title');
+        sectionTitles[0].innerHTML = '1. Informationen, die wir sammeln';
+        sectionTitles[1].innerHTML = '2. Verwendung von Cookies';
+        sectionTitles[2].innerHTML = '3. Dienste von Drittanbietern';
+        sectionTitles[3].innerHTML = '4. Ihre Rechte';
+        sectionTitles[4].innerHTML = '5. Kontaktieren Sie uns';
+        
+        const sectionContents = document.querySelectorAll('.section-content');
+        sectionContents[0].innerHTML = '<li>Wir können nicht personenidentifizierbare Informationen über Cookies und Analysetools sammeln, einschließlich Ihrer IP-Adresse, Ihres Browsertyps und besuchter Seiten.</li>';
+        sectionContents[1].innerHTML = 'Wir verwenden Cookies, um Ihr Erlebnis zu verbessern, gezielte Anzeigen über Dienste von Drittanbietern (z.B. Google AdSense) zu liefern und Verkehrstrends zu analysieren.';
+        sectionContents[2].innerHTML = 'Drittanbieter, einschließlich Google, können Cookies verwenden, um Anzeigen basierend auf Ihren früheren Besuchen auf dieser oder anderen Websites zu schalten. Sie können personalisierte Anzeigen über <a href="https://www.google.com/settings/ads" target="_blank" class="text-indigo-300 hover:text-yellow-300">Google Ads-Einstellungen</a> deaktivieren.';
+        sectionContents[3].innerHTML = 'Sie können wählen, Cookies über Ihre Browsereinstellungen zu deaktivieren. Dies kann jedoch einige Funktionen der Website beeinträchtigen.';
+        sectionContents[4].innerHTML = 'Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte unter <a href="mailto:admin@gamerblitz.online" class="text-indigo-300 hover:text-yellow-300">admin@gamerblitz.online</a>.';
+        
+      } else if(isRU) {
+        document.title = 'Политика конфиденциальности | Игровая платформа GamerBlitz';
+        document.querySelector('meta[name="description"]').content = 
+          'Политика конфиденциальности GamerBlitz: Узнайте, как мы защищаем ваши данные во время игры в наши бесплатные онлайн-браузерные игры.';
+        
+        // 更新页面内容
+        document.querySelector('h1').innerHTML = 'Политика конфиденциальности';
+        document.querySelector('.update-date').innerHTML = 'Последнее обновление: 6 мая 2025 г.';
+        document.querySelector('.intro-text').innerHTML = 'В GamerBlitz.online мы ценим вашу конфиденциальность. Эта Политика конфиденциальности описывает типы личной информации, которую мы собираем, и как мы ее используем.';
+        
+        const sectionTitles = document.querySelectorAll('.section-title');
+        sectionTitles[0].innerHTML = '1. Информация, которую мы собираем';
+        sectionTitles[1].innerHTML = '2. Использование файлов cookie';
+        sectionTitles[2].innerHTML = '3. Сторонние сервисы';
+        sectionTitles[3].innerHTML = '4. Ваши права';
+        sectionTitles[4].innerHTML = '5. Свяжитесь с нами';
+        
+        const sectionContents = document.querySelectorAll('.section-content');
+        sectionContents[0].innerHTML = '<li>Мы можем собирать неперсонифицированную информацию через файлы cookie и аналитические инструменты, включая ваш IP-адрес, тип браузера и посещенные страницы.</li>';
+        sectionContents[1].innerHTML = 'Мы используем файлы cookie для улучшения вашего опыта, показа целевой рекламы через сторонние сервисы (например, Google AdSense) и анализа тенденций трафика.';
+        sectionContents[2].innerHTML = 'Сторонние поставщики, включая Google, могут использовать файлы cookie для показа рекламы на основе ваших предыдущих посещений этого или других сайтов. Вы можете отказаться от персонализированной рекламы через <a href="https://www.google.com/settings/ads" target="_blank" class="text-indigo-300 hover:text-yellow-300">настройки рекламы Google</a>.';
+        sectionContents[3].innerHTML = 'Вы можете отключить файлы cookie через настройки вашего браузера. Однако это может повлиять на некоторые функции сайта.';
+        sectionContents[4].innerHTML = 'Если у вас есть вопросы об этой Политике конфиденциальности, пожалуйста, свяжитесь с нами по адресу <a href="mailto:admin@gamerblitz.online" class="text-indigo-300 hover:text-yellow-300">admin@gamerblitz.online</a>.';
+      }
+    });
+    
+    // GA 脚本
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8DHJNFJ179');
+  </script>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DHJNFJ179"></script>
+  
+  <!-- Google AdSense 代码 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5724235377875645" crossorigin="anonymous"></script>
 </head>
-<body>
-  <h1>Privacy Policy</h1>
-  <p>Last updated: May 6, 2025</p>
+<body class="bg-gray-900 text-white">
+  <!-- Navigation -->
+  <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex flex-wrap justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="images/logo.png" alt="GamerBlitz Logo" class="h-8 w-8 rounded" />
+        <span class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+          GamerBlitz<span class="text-yellow-400">.online</span>
+        </span>
+      </a>
+      
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+        <a href="categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+        <a href="top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+        <a href="new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+      </div>
+    </div>
+  </nav>
 
-  <p>At GamerBlitz.online, we value your privacy. This Privacy Policy outlines the types of personal information we collect and how we use it.</p>
+  <!-- Header Section -->
+  <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+        Privacy Policy
+      </h1>
+    </div>
+  </header>
 
-  <h2>1. Information We Collect</h2>
-  <ul>
-    <li>We may collect non-personally identifiable information via cookies and analytics tools, including your IP address, browser type, and visited pages.</li>
-  </ul>
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+    <!-- AdSense 广告占位符 -->
+    <div class="mb-8">
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5724235377875645"
+          data-ad-slot="7259870977"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    
+    <!-- Privacy Policy Content -->
+    <div class="bg-gray-800 rounded-lg p-8 mb-8">
+      <p class="update-date text-gray-400 mb-4">Last updated: May 6, 2025</p>
+      
+      <p class="intro-text text-lg mb-6">
+        At GamerBlitz.online, we value your privacy. This Privacy Policy outlines the types of personal information we collect and how we use it.
+      </p>
+      
+      <div class="mb-6">
+        <h2 class="section-title text-2xl font-bold mb-3 text-yellow-400">1. Information We Collect</h2>
+        <ul class="text-gray-300 list-disc pl-5">
+          <li class="section-content">We may collect non-personally identifiable information via cookies and analytics tools, including your IP address, browser type, and visited pages.</li>
+        </ul>
+      </div>
+      
+      <div class="mb-6">
+        <h2 class="section-title text-2xl font-bold mb-3 text-yellow-400">2. Use of Cookies</h2>
+        <p class="section-content text-gray-300">
+          We use cookies to enhance your experience, deliver targeted ads via third-party services (e.g. Google AdSense), and analyze traffic trends.
+        </p>
+      </div>
+      
+      <div class="mb-6">
+        <h2 class="section-title text-2xl font-bold mb-3 text-yellow-400">3. Third-party Services</h2>
+        <p class="section-content text-gray-300">
+          Third-party vendors, including Google, may use cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalized ads through <a href="https://www.google.com/settings/ads" target="_blank" class="text-indigo-300 hover:text-yellow-300">Google Ads Settings</a>.
+        </p>
+      </div>
+      
+      <div class="mb-6">
+        <h2 class="section-title text-2xl font-bold mb-3 text-yellow-400">4. Your Rights</h2>
+        <p class="section-content text-gray-300">
+          You may choose to disable cookies through your browser settings. However, doing so may affect some functionality of the site.
+        </p>
+      </div>
+      
+      <div class="mb-6">
+        <h2 class="section-title text-2xl font-bold mb-3 text-yellow-400">5. Contact Us</h2>
+        <p class="section-content text-gray-300">
+          If you have any questions about this Privacy Policy, please contact us at <a href="mailto:admin@gamerblitz.online" class="text-indigo-300 hover:text-yellow-300">admin@gamerblitz.online</a>.
+        </p>
+      </div>
+    </div>
+    
+    <!-- AdSense 广告占位符 (底部) -->
+    <div class="my-8">
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5724235377875645"
+          data-ad-slot="5946137344"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </main>
 
-  <h2>2. Use of Cookies</h2>
-  <p>We use cookies to enhance your experience, deliver targeted ads via third-party services (e.g. Google AdSense), and analyze traffic trends.</p>
-
-  <h2>3. Third-party Services</h2>
-  <p>Third-party vendors, including Google, may use cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalized ads through <a href="https://www.google.com/settings/ads" target="_blank">Google Ads Settings</a>.</p>
-
-  <h2>4. Your Rights</h2>
-  <p>You may choose to disable cookies through your browser settings. However, doing so may affect some functionality of the site.</p>
-
-  <h2>5. Contact Us</h2>
-  <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:admin@gamerblitz.online">admin@gamerblitz.online</a>.</p>
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-gray-300 py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">GamerBlitz</h3>
+          <p class="text-sm text-gray-400">Play the best browser games anytime, anywhere. No installs, just fun!</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Categories</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="categories/action.html" class="hover:text-white">Action</a></li>
+            <li><a href="categories/puzzle.html" class="hover:text-white">Puzzle</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Follow Us</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="#" class="hover:text-white">Twitter</a></li>
+            <li><a href="#" class="hover:text-white">Discord</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Legal</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-sm text-gray-400">
+        © 2025 GamerBlitz.online — All rights reserved.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -3,16 +3,247 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us</title>
+  <title>Contact Us | GamerBlitz Online Gaming Platform</title>
+  <meta name="description" content="Contact the GamerBlitz team for feedback, questions, or partnership inquiries. We're here to help make your gaming experience better!">
+  <link href="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="canonical" href="https://gamerblitz.online/contact.html">
+  
+  <!-- 语言检测脚本 -->
+  <script>
+    // 检测用户语言
+    const userLang = navigator.language || navigator.userLanguage || 'en';
+    const isDE = userLang.startsWith('de');
+    const isRU = userLang.startsWith('ru');
+    
+    // 设置网页语言
+    document.documentElement.lang = isDE ? 'de' : (isRU ? 'ru' : 'en');
+    
+    // 根据用户语言优化元数据
+    document.addEventListener('DOMContentLoaded', function() {
+      if(isDE) {
+        document.title = 'Kontaktiere uns | GamerBlitz Online-Spieleplattform';
+        document.querySelector('meta[name="description"]').content = 
+          'Kontaktieren Sie das GamerBlitz-Team für Feedback, Fragen oder Partnerschaftsanfragen. Wir sind hier, um Ihr Spielerlebnis zu verbessern!';
+        
+        // 更新页面内容
+        document.querySelector('h1').innerHTML = 'Kontaktiere uns';
+        document.querySelector('.intro-text').innerHTML = 'Wir würden gerne von Ihnen hören! Wenn Sie Fragen, Feedback oder Partnerschaftsanfragen haben, kontaktieren Sie uns bitte:';
+        
+        const contactInfoLabels = document.querySelectorAll('.contact-label');
+        contactInfoLabels[0].innerHTML = 'E-mail:';
+        contactInfoLabels[1].innerHTML = 'Antwortzeit:';
+        
+        const contactInfoValues = document.querySelectorAll('.contact-value');
+        contactInfoValues[1].innerHTML = 'Wir bemühen uns, alle Anfragen innerhalb von 48 Stunden zu beantworten.';
+        
+        document.querySelector('.social-text').innerHTML = 'Sie können uns auch in sozialen Medien folgen oder unserem Gaming-Community-Forum beitreten (demnächst verfügbar!).';
+        
+        document.querySelector('.feedback-title').innerHTML = 'Feedback senden';
+        document.querySelector('.feedback-text').innerHTML = 'Ihre Meinung ist uns wichtig! Teilen Sie uns mit, wie wir GamerBlitz für Sie verbessern können:';
+        
+        document.querySelector('.report-title').innerHTML = 'Problem melden';
+        document.querySelector('.report-text').innerHTML = 'Wenn Sie auf ein Problem mit einem unserer Spiele oder auf unserer Website stoßen, lassen Sie es uns bitte wissen, damit wir es beheben können.';
+        
+        document.querySelector('.partnership-title').innerHTML = 'Partnerschaften';
+        document.querySelector('.partnership-text').innerHTML = 'Interessiert an einer Zusammenarbeit mit GamerBlitz? Wir sind immer offen für neue Partnerschaften mit Spieleentwicklern, Content-Erstellern und anderen Gaming-Unternehmen.';
+        
+      } else if(isRU) {
+        document.title = 'Свяжитесь с нами | Игровая платформа GamerBlitz';
+        document.querySelector('meta[name="description"]').content = 
+          'Свяжитесь с командой GamerBlitz для обратной связи, вопросов или партнерских запросов. Мы здесь, чтобы сделать ваш игровой опыт лучше!';
+        
+        // 更新页面内容
+        document.querySelector('h1').innerHTML = 'Свяжитесь с нами';
+        document.querySelector('.intro-text').innerHTML = 'Мы будем рады услышать от вас! Если у вас есть вопросы, отзывы или запросы о партнерстве, пожалуйста, свяжитесь с нами:';
+        
+        const contactInfoLabels = document.querySelectorAll('.contact-label');
+        contactInfoLabels[0].innerHTML = 'Электронная почта:';
+        contactInfoLabels[1].innerHTML = 'Время ответа:';
+        
+        const contactInfoValues = document.querySelectorAll('.contact-value');
+        contactInfoValues[1].innerHTML = 'Мы стараемся отвечать на все запросы в течение 48 часов.';
+        
+        document.querySelector('.social-text').innerHTML = 'Вы также можете подписаться на нас в социальных сетях или присоединиться к нашему игровому сообществу на форуме (скоро!).';
+        
+        document.querySelector('.feedback-title').innerHTML = 'Отправить отзыв';
+        document.querySelector('.feedback-text').innerHTML = 'Ваше мнение важно для нас! Расскажите нам, как мы можем улучшить GamerBlitz для вас:';
+        
+        document.querySelector('.report-title').innerHTML = 'Сообщить о проблеме';
+        document.querySelector('.report-text').innerHTML = 'Если вы столкнулись с проблемой в одной из наших игр или на сайте, пожалуйста, сообщите нам, чтобы мы могли исправить ее.';
+        
+        document.querySelector('.partnership-title').innerHTML = 'Партнерство';
+        document.querySelector('.partnership-text').innerHTML = 'Заинтересованы в сотрудничестве с GamerBlitz? Мы всегда открыты для новых партнерств с разработчиками игр, создателями контента и другими игровыми компаниями.';
+      }
+    });
+    
+    // GA 脚本
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8DHJNFJ179');
+  </script>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DHJNFJ179"></script>
+  
+  <!-- Google AdSense 代码 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5724235377875645" crossorigin="anonymous"></script>
 </head>
-<body>
-  <h1>Contact Us</h1>
-  <p>We’d love to hear from you! If you have any questions, feedback, or partnership inquiries, please reach out to us:</p>
+<body class="bg-gray-900 text-white">
+  <!-- Navigation -->
+  <nav class="bg-indigo-900 p-4 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex flex-wrap justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="images/logo.png" alt="GamerBlitz Logo" class="h-8 w-8 rounded" />
+        <span class="text-2xl font-bold text-indigo-300 hover:text-white transition duration-300">
+          GamerBlitz<span class="text-yellow-400">.online</span>
+        </span>
+      </a>
+      
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-yellow-300 transition duration-300">Home</a>
+        <a href="categories/index.html" class="hover:text-yellow-300 transition duration-300">Categories</a>
+        <a href="top-games.html" class="hover:text-yellow-300 transition duration-300">Top Games</a>
+        <a href="new-games.html" class="hover:text-yellow-300 transition duration-300">New Games</a>
+      </div>
+    </div>
+  </nav>
 
-  <ul>
-    <li><strong>Email:</strong> <a href="mailto:admin@gamerblitz.online">admin@gamerblitz.online</a></li>
-  </ul>
+  <!-- Header Section -->
+  <header class="py-8 bg-gradient-to-r from-purple-800 to-indigo-800">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+        Contact Us
+      </h1>
+    </div>
+  </header>
 
-  <p>You can also connect with us on social media or join our gaming community forums (coming soon!).</p>
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+    <!-- AdSense 广告占位符 -->
+    <div class="mb-8">
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5724235377875645"
+          data-ad-slot="7259870977"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    
+    <!-- Contact Content -->
+    <div class="bg-gray-800 rounded-lg p-8 mb-8">
+      <p class="intro-text text-lg mb-6">
+        We'd love to hear from you! If you have any questions, feedback, or partnership inquiries, please reach out to us:
+      </p>
+      
+      <div class="mb-6">
+        <ul class="text-gray-300 space-y-4">
+          <li class="flex items-start">
+            <span class="contact-label font-bold text-indigo-300 w-32">Email:</span>
+            <span class="contact-value"><a href="mailto:admin@gamerblitz.online" class="text-indigo-300 hover:text-yellow-300">admin@gamerblitz.online</a></span>
+          </li>
+          <li class="flex items-start">
+            <span class="contact-label font-bold text-indigo-300 w-32">Response time:</span>
+            <span class="contact-value">We strive to respond to all inquiries within 48 hours.</span>
+          </li>
+        </ul>
+      </div>
+      
+      <p class="social-text text-gray-300 mb-8">
+        You can also connect with us on social media or join our gaming community forums (coming soon!).
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-gray-700 rounded-lg p-6">
+          <h2 class="feedback-title text-2xl font-bold mb-4 text-yellow-400">Send Feedback</h2>
+          <p class="feedback-text text-gray-300">
+            Your opinion matters to us! Let us know how we can improve GamerBlitz for you:
+          </p>
+          <div class="mt-4">
+            <a href="mailto:feedback@gamerblitz.online" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+              Share Feedback
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gray-700 rounded-lg p-6">
+          <h2 class="report-title text-2xl font-bold mb-4 text-yellow-400">Report an Issue</h2>
+          <p class="report-text text-gray-300">
+            If you encounter a problem with any of our games or on our website, please let us know so we can fix it.
+          </p>
+          <div class="mt-4">
+            <a href="mailto:support@gamerblitz.online" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+              Report Issue
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gray-700 rounded-lg p-6">
+          <h2 class="partnership-title text-2xl font-bold mb-4 text-yellow-400">Partnerships</h2>
+          <p class="partnership-text text-gray-300">
+            Interested in partnering with GamerBlitz? We're always open to new partnerships with game developers, content creators, and other gaming businesses.
+          </p>
+          <div class="mt-4">
+            <a href="mailto:partners@gamerblitz.online" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+              Partner with Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- AdSense 广告占位符 (底部) -->
+    <div class="my-8">
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5724235377875645"
+          data-ad-slot="5946137344"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-gray-300 py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">GamerBlitz</h3>
+          <p class="text-sm text-gray-400">Play the best browser games anytime, anywhere. No installs, just fun!</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Categories</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="categories/action.html" class="hover:text-white">Action</a></li>
+            <li><a href="categories/puzzle.html" class="hover:text-white">Puzzle</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Follow Us</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="#" class="hover:text-white">Twitter</a></li>
+            <li><a href="#" class="hover:text-white">Discord</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">Legal</h3>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-sm text-gray-400">
+        © 2025 GamerBlitz.online — All rights reserved.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
