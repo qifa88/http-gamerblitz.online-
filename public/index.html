@@ -196,17 +196,69 @@
       <p class="text-xl text-center text-indigo-200 max-w-3xl mx-auto">
         Experience the thrill of instant gaming - no downloads required. Jump straight into action with our curated collection of browser games!
       </p>
+      
+      <!-- 将游戏卡片移至这里（红框位置） -->
+      <div class="mt-8">
+        <h2 class="text-3xl font-bold mb-6 text-yellow-400 text-center">Featured Games</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+          <!-- Minecraft Classic -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+            <img src="images/minecraft-classic.jpg" alt="Minecraft Classic" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-yellow-400 mb-2">Minecraft Classic</h3>
+              <a href="games/minecraft-classic.html" class="bg-indigo-600 hover:bg-indigo-700 text-white w-full block text-center font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Minecraft Classic' });">
+                <span class="en">Play Now</span>
+                <span class="de" style="display:none">Jetzt Spielen</span>
+                <span class="ru" style="display:none">Играть</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Retro Bowl -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+            <img src="images/retro-bowl.jpg" alt="Retro Bowl" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-yellow-400 mb-2">Retro Bowl</h3>
+              <a href="games/retro-bowl.html" class="bg-indigo-600 hover:bg-indigo-700 text-white w-full block text-center font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Retro Bowl' });">
+                <span class="en">Play Now</span>
+                <span class="de" style="display:none">Jetzt Spielen</span>
+                <span class="ru" style="display:none">Играть</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Chess -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+            <img src="images/chess.jpg" alt="Chess" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-yellow-400 mb-2">Chess</h3>
+              <a href="games/chess.html" class="bg-indigo-600 hover:bg-indigo-700 text-white w-full block text-center font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Chess' });">
+                <span class="en">Play Now</span>
+                <span class="de" style="display:none">Jetzt Spielen</span>
+                <span class="ru" style="display:none">Играть</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- 2048 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+            <img src="images/2048.jpg" alt="2048" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-yellow-400 mb-2">2048</h3>
+              <a href="games/2048.html" class="bg-indigo-600 hover:bg-indigo-700 text-white w-full block text-center font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': '2048' });">
+                <span class="en">Play Now</span>
+                <span class="de" style="display:none">Jetzt Spielen</span>
+                <span class="ru" style="display:none">Играть</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Game Area -->
   <main class="container mx-auto px-4 py-8">
-    <!-- 示例游戏内容 -->
-    <section class="mb-12">
-        <!-- Featured Games -->
-<section class="mb-12">
-    <h2 class="text-3xl font-bold mb-6 text-yellow-400">Featured Games</h2>
-    
     <!-- AdSense 广告占位符 -->
     <div class="mb-8">
       <ins class="adsbygoogle"
@@ -220,221 +272,8 @@
       </script>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  
-      <!-- Minecraft Classic (热门游戏1) -->
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/minecraft-classic.jpg" alt="Minecraft Classic" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Minecraft Classic</h3>
-          <p class="text-gray-300 mb-4 game-description">
-            <span class="en">Build and explore in the original version of the world's most popular sandbox game.</span>
-            <span class="de" style="display:none">Bauen und erkunden Sie in der Originalversion des beliebtesten Sandbox-Spiels der Welt.</span>
-            <span class="ru" style="display:none">Стройте и исследуйте в оригинальной версии самой популярной в мире "песочницы".</span>
-          </p>
-          <a href="games/minecraft-classic.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="console.log('GA event: Minecraft Classic clicked'); gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Minecraft Classic' }); setTimeout(() => { window.location.href = 'games/minecraft-classic.html'; }, 200); return false;">
-            <span class="en">Play Now</span>
-            <span class="de" style="display:none">Jetzt Spielen</span>
-            <span class="ru" style="display:none">Играть</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Retro Bowl (热门游戏2) -->
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/retro-bowl.jpg" alt="Retro Bowl" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Retro Bowl</h3>
-          <p class="text-gray-300 mb-4 game-description">
-            <span class="en">Experience the glory of pixel-perfect football in this retro-styled sports management game.</span>
-            <span class="de" style="display:none">Erleben Sie den Ruhm des pixelperfekten Footballs in diesem Retro-Sportmanagement-Spiel.</span>
-            <span class="ru" style="display:none">Испытайте славу пиксельного футбола в этой ретро-игре по управлению спортом.</span>
-          </p>
-          <a href="games/retro-bowl.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="console.log('GA event: Retro Bowl clicked'); gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Retro Bowl' }); setTimeout(() => { window.location.href = 'games/retro-bowl.html'; }, 200); return false;">
-            <span class="en">Play Now</span>
-            <span class="de" style="display:none">Jetzt Spielen</span>
-            <span class="ru" style="display:none">Играть</span>
-          </a>
-        </div>
-      </div>
-      
-      <!-- Game Card (Chess) -->
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/chess.jpg" alt="Chess" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Chess</h3>
-          <p class="text-gray-300 mb-4 game-description">
-            <span class="en">Challenge your mind with the ultimate strategy game. Play against AI or other players.</span>
-            <span class="de" style="display:none">Fordern Sie Ihren Geist mit dem ultimativen Strategiespiel heraus. Spielen Sie gegen KI oder andere Spieler.</span>
-            <span class="ru" style="display:none">Испытайте свой ум в этой классической стратегической игре. Играйте против ИИ или других игроков.</span>
-          </p>
-          <a href="games/chess.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="console.log('GA event: Chess clicked'); gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Chess' }); setTimeout(() => { window.location.href = 'games/chess.html'; }, 200); return false;">
-            <span class="en">Play Now</span>
-            <span class="de" style="display:none">Jetzt Spielen</span>
-            <span class="ru" style="display:none">Играть</span>
-          </a>
-          
-          <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "ItemList",
-              "name": "Top Games",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "url": "https://gamerblitz.online/games/minecraft-classic.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "url": "https://gamerblitz.online/games/retro-bowl.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "url": "https://gamerblitz.online/games/chess.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 4,
-                  "url": "https://gamerblitz.online/games/cookie-clicker.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 5,
-                  "url": "https://gamerblitz.online/games/2048.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 6,
-                  "url": "https://gamerblitz.online/games/slope.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 7,
-                  "url": "https://gamerblitz.online/games/tetris.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 8,
-                  "url": "https://gamerblitz.online/games/pacman.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 9,
-                  "url": "https://gamerblitz.online/games/flappy-bird.html"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 10,
-                  "url": "https://gamerblitz.online/games/friday-night-funkin.html"
-                }
-              ]
-            }
-            </script>
-            
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/2048.jpg" alt="2048" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">2048</h3>
-          <p class="text-gray-300 mb-4">Join the numbers and get to the 2048 tile! Are you ready for this addictive puzzle challenge?</p>
-          <a href="games/2048.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': '2048' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/slope.jpg" alt="Slope" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Slope</h3>
-          <p class="text-gray-300 mb-4">Challenge yourself in this fast-paced 3D running game. Test your reflexes as you navigate through increasingly difficult terrain.</p>
-          <a href="games/slope.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Slope' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/cookie-clicker.jpg" alt="Cookie Clicker" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Cookie Clicker</h3>
-          <p class="text-gray-300 mb-4">Click your way to a cookie empire in this addictive idle game that never ends!</p>
-          <a href="games/cookie-clicker.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Cookie Clicker' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/wordle.jpg" alt="Wordle" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Wordle</h3>
-          <p class="text-gray-300 mb-4">Test your vocabulary in this popular word-guessing game. New puzzle every day!</p>
-          <a href="games/wordle.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Wordle' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/tetris.jpg" alt="Tetris" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Tetris</h3>
-          <p class="text-gray-300 mb-4">The classic block-stacking puzzle game that never gets old. How high can you score?</p>
-          <a href="games/tetris.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Tetris' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/pacman.jpg" alt="Pacman" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Pacman</h3>
-          <p class="text-gray-300 mb-4">Navigate through mazes, eat dots, and avoid ghosts in this timeless arcade classic.</p>
-          <a href="games/pacman.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Pacman' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/flappy-bird.jpg" alt="Flappy Bird" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Flappy Bird</h3>
-          <p class="text-gray-300 mb-4">Guide your bird through pipes in this challenging and addictive arcade game.</p>
-          <a href="games/flappy-bird.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Flappy Bird' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-        <img src="images/friday-night-funkin.jpg" alt="Friday Night Funkin" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Friday Night Funkin</h3>
-          <p class="text-gray-300 mb-4">Battle in musical showdowns to impress your girlfriend in this rhythm-based game!</p>
-          <a href="games/friday-night-funkin.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onclick="gtag('event', 'play', { 'event_category': 'Games', 'event_label': 'Friday Night Funkin' });"
-          >Play Now</a>
-        </div>
-      </div>
-  
-    </div>
-  </section>
-  
-  <!-- AdSense 广告占位符 (分类前) -->
-  <div class="container mx-auto px-4 mb-12">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-5724235377875645"
-         data-ad-slot="5946137344"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-  
-  <!-- Categories Section -->
-  <section class="mb-12">
+    <!-- Categories Section -->
+    <section class="mb-12">
       <h2 class="text-3xl font-bold mb-6 text-yellow-400">Game Categories</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <a href="categories/action.html" class="bg-gray-800 p-4 rounded-lg text-center hover:bg-gray-700 transition duration-300">
@@ -447,6 +286,19 @@
         </a>
       </div>
     </section>
+    
+    <!-- AdSense 广告占位符 (分类前) -->
+    <div class="container mx-auto px-4 mb-12">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5724235377875645"
+           data-ad-slot="5946137344"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
   </main>
 
   <!-- Footer -->
